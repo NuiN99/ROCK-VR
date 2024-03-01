@@ -32,6 +32,7 @@ MonoBehaviour:
     assemblyNames:
     - Animancer
     - Animancer.FSM
+    - Assembly-CSharp
     - Assembly-CSharp-firstpass
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
