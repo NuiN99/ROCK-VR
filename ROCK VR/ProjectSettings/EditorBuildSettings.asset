@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing_Cai.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3b907ef1893899449bcbae6e940dc190,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7137e5337033a4c4d9813a3458ca4876,
+      type: 2}
