@@ -49,7 +49,6 @@ public class PlayerMovementXRInput : MonoBehaviour, IMovementInput
         var yQuat = Quaternion.AngleAxis(_rotation.y, Vector3.left);
 
         Quaternion newRotation = xQuat * yQuat;
-        MainCamera.Cam.transform.rotation = newRotation;
 
         return Quaternion.Euler(0, newRotation.eulerAngles.y, 0);
     }

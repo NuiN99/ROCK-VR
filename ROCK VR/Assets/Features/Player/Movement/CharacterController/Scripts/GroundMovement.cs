@@ -45,7 +45,7 @@ namespace NuiN.Movement
             rb = GetComponent<Rigidbody>();
         }
 
-        void FixedUpdate()
+        void IMovement.FixedTick()
         {
             if (rb.velocity.y <= downForceStartUpVelocity)
             {

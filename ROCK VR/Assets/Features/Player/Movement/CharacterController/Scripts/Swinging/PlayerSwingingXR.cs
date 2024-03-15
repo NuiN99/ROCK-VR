@@ -3,8 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerSwingingXR : MonoBehaviour
 {
-    Transform _connectionPoint;
-    Rigidbody _anchor;
+    Rigidbody _connectionPoint;
     bool _addedRigidbody;
     bool _attached;
 
@@ -19,15 +18,18 @@ public class PlayerSwingingXR : MonoBehaviour
 
     [SerializeField] LineRenderer indicatorLineRenderer;
     [SerializeField] LineRenderer ropeLineRenderer;
-    
-    Vector3 ConnectedAnchorWorld => _anchor.transform.TransformPoint(joint.connectedAnchor);
 
+    [SerializeField] bool useMouseAndKeyboard;
+    
     void Awake()
     {
         indicatorLineRenderer.positionCount = 2;
         ropeLineRenderer.positionCount = 2;
         ropeLineRenderer.enabled = false;
-        _connectionPoint = new GameObject("RopeConnectionPoint").transform;
+        
+        _connectionPoint = new GameObject("RopeConnectionPoint").AddComponent<Rigidbody>();
+        _connectionPoint.isKinematic = true;
+        _connectionPoint.detectCollisions = false;
     }
 
     void Update()
@@ -37,7 +39,7 @@ public class PlayerSwingingXR : MonoBehaviour
 
         if (!_attached)
         {
-            joint.connectedAnchor = transform.position;
+            joint.connectedAnchor = root.position;
             
             indicatorLineRenderer.SetPosition(0, root.position);
             indicatorLineRenderer.SetPosition(1, root.position + root.forward * maxAttachDistance);
@@ -51,27 +53,26 @@ public class PlayerSwingingXR : MonoBehaviour
 
     void Activate()
     {
-        if (!Physics.Raycast(root.position, root.forward, out RaycastHit hit, maxAttachDistance, attachableLayers)) return;
-        if (!hit.collider.TryGetComponent(out _anchor))
+        if (!Physics.Raycast(root.position, useMouseAndKeyboard ? MainCamera.Cam.transform.forward : root.forward, out RaycastHit hit, maxAttachDistance, attachableLayers)) return;
+        if (!hit.collider.TryGetComponent(out Rigidbody attachedRB))
         {
-            _anchor = hit.collider.gameObject.AddComponent<Rigidbody>();
-            _anchor.isKinematic = true;
-            _addedRigidbody = true;
+            _connectionPoint.MovePosition(hit.point);
+            _connectionPoint.transform.position = hit.point;
+            
+            joint.connectedBody = _connectionPoint;
+            joint.connectedAnchor = _connectionPoint.transform.InverseTransformPoint(hit.point);
+            
+            _connectionPoint.transform.SetParent(hit.collider.transform);
         }
         else
         {
-            _addedRigidbody = false;
+            joint.connectedBody = attachedRB;
+            joint.connectedAnchor = attachedRB.transform.InverseTransformPoint(hit.point);
         }
         
         SoftJointLimit limit = joint.linearLimit;
         limit.limit = Vector3.Distance(transform.position, hit.point);
         joint.linearLimit = limit;
-            
-        joint.connectedBody = _anchor;
-        joint.connectedAnchor = _anchor.gameObject.transform.InverseTransformPoint(hit.point);
-
-        _connectionPoint.position = hit.point;
-        _connectionPoint.SetParent(hit.collider.transform);
         
         ropeLineRenderer.enabled = true;
         indicatorLineRenderer.enabled = false;
@@ -81,8 +82,9 @@ public class PlayerSwingingXR : MonoBehaviour
 
     void Detach()
     {
+        _connectionPoint.transform.SetParent(null);
+        
         joint.connectedBody = null;
-        if(_anchor != null && _addedRigidbody) Destroy(_anchor);
 
         ropeLineRenderer.enabled = false;
         indicatorLineRenderer.enabled = true;
@@ -92,12 +94,17 @@ public class PlayerSwingingXR : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (!_attached)
+        if (!Application.isPlaying) return;
+        
+        if (_attached)
         {
-            if (!Physics.Raycast(root.position, root.forward, out RaycastHit hit, maxAttachDistance, attachableLayers)) return;
-            Gizmos.DrawSphere(hit.point, 0.25f);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(_connectionPoint.transform.position, 0.25f);
+            Gizmos.color = Color.white;
             return;
         }
-        Debug.DrawLine(ConnectedAnchorWorld, transform.position, Color.green);
+        
+        if (!Physics.Raycast(root.position, useMouseAndKeyboard ? MainCamera.Cam.transform.forward : root.forward, out RaycastHit hit, maxAttachDistance, attachableLayers)) return;
+        Gizmos.DrawSphere(hit.point, 0.25f);
     }
 }

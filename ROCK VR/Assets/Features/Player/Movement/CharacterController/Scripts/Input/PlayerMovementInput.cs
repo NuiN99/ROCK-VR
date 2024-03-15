@@ -8,25 +8,11 @@ public class PlayerMovementInput : MonoBehaviour, IMovementInput
     
     Vector2 _rotation;
 
-    [SerializeField] Transform cameraAnchor;
-    
     [SerializeField] KeyCode sprintKey = KeyCode.LeftShift;
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
     
     [SerializeField] float lookSensitivity = 20f;
     [Range(0f, 90f)][SerializeField] float yRotationLimit = 88f;
-
-    void Awake()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
-    }
-
-    void Update()
-    {
-        MainCamera.Cam.transform.position = cameraAnchor.position;
-        cameraAnchor.transform.rotation = MainCamera.Cam.transform.rotation;
-    }
 
     bool IMovementInput.ShouldJump()
     {

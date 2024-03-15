@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NuiN.NExtensions;
+using TNRD;
 using UnityEngine;
 
 namespace NuiN.Movement
@@ -9,6 +10,12 @@ namespace NuiN.Movement
     [RequireComponent(typeof(IMovement), typeof(IMovementInput))]
     public class MovementController : MonoBehaviour
     {
+        [SerializeField] SerializableInterface<IMovement> movement;
+        [SerializeField] SerializableInterface<IMovementInput> input;
+        [SerializeField] SerializableInterface<IMovementInput> vrInput;
+
+        [SerializeField] bool useMouseAndKeyboard;
+
         IMovement _movement;
         IMovementInput _input;
         
@@ -22,11 +29,11 @@ namespace NuiN.Movement
 
         void Awake()
         {
-            _movement = GetComponent<IMovement>();
-            if(_movement == null) Debug.LogError($"Missing Movement component on {gameObject}", gameObject);
+            _movement = movement.Value;
+            _input = useMouseAndKeyboard ? vrInput.Value : input.Value;
             
-            _input = GetComponent<IMovementInput>();
-            if (_input == null) Debug.LogError($"Missing MovementInput on {gameObject.name}", gameObject);
+            if(movement == null) Debug.LogError($"Missing Movement component on {gameObject}", gameObject);
+            if (input == null) Debug.LogError($"Missing MovementInput on {gameObject.name}", gameObject);
         }
 
         void Update()
@@ -41,6 +48,8 @@ namespace NuiN.Movement
             IsRunning = _input.IsRunning(); // only for debugging
             
             if(CanMove) _movement.Move(_input);
+            
+            _movement.FixedTick();
         }
         
         public void ApplyConstraint(float duration, MovementConstraint constraint)

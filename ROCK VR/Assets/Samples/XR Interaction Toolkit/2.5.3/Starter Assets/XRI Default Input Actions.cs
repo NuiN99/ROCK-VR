@@ -1659,6 +1659,17 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
                 },
                 {
                     ""name"": """",
+                    ""id"": ""20ea1c93-c66a-4af8-bd62-f07729446901"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""150f414f-61bf-47b1-b4f8-f772a2a40565"",
                     ""path"": ""<XRController>{RightHand}/{Trigger}"",
                     ""interactions"": """",

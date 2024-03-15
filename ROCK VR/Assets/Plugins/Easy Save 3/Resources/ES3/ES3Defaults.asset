@@ -34,6 +34,7 @@ MonoBehaviour:
     - Animancer.FSM
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
+    - TNRD.SerializableInterface
     - Unity.XR.Interaction.Toolkit.Samples.StarterAssets
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
