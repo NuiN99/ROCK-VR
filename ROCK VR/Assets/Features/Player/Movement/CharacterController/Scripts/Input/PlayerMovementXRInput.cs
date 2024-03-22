@@ -8,14 +8,31 @@ public class PlayerMovementXRInput : MonoBehaviour, IMovementInput
 
     [SerializeField] InputActionReference rotationAction;
     [SerializeField] InputActionReference jumpAction;
+    [SerializeField] InputActionReference sprintAction;
 
     //[SerializeField] float jumpYThreshold = 0.25f;
     [SerializeField] float lookSensitivity = 20f;
+
+    bool _sprintToggled;
 
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
+    }
+
+    void OnEnable()
+    {
+        sprintAction.action.performed += ToggleSprint;
+    }
+    void OnDisable()
+    {
+        sprintAction.action.performed -= ToggleSprint;
+    }
+
+    void ToggleSprint(InputAction.CallbackContext ctx)
+    {
+        _sprintToggled = !_sprintToggled;
     }
 
     bool IMovementInput.ShouldJump()
@@ -56,6 +73,6 @@ public class PlayerMovementXRInput : MonoBehaviour, IMovementInput
 
     bool IMovementInput.IsRunning()
     {
-        return false;
+        return _sprintToggled;
     }
 }
