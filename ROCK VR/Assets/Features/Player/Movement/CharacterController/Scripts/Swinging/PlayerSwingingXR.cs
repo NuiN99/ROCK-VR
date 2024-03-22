@@ -1,11 +1,19 @@
-﻿using UnityEngine;
+﻿using NuiN.NExtensions;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerSwingingXR : MonoBehaviour
 {
+    Rigidbody _defaultConnectionPoint;
     Rigidbody _connectionPoint;
     bool _addedRigidbody;
     bool _attached;
+
+    float _distFromStartHandLocalPosLastFrame;
+    Vector3 _localHandPosLastFrame;
+
+    [SerializeField] SimpleTimer pullTimer;
+    [SerializeField] float pullDistThreshold = 0.1f;
 
     [SerializeField] Transform root;
     
@@ -19,6 +27,9 @@ public class PlayerSwingingXR : MonoBehaviour
     [SerializeField] LineRenderer indicatorLineRenderer;
     [SerializeField] LineRenderer ropeLineRenderer;
 
+    [SerializeField] float pullForce = 5f;
+    [SerializeField] Rigidbody rb;
+
     [SerializeField] bool useMouseAndKeyboard;
     
     void Awake()
@@ -27,9 +38,9 @@ public class PlayerSwingingXR : MonoBehaviour
         ropeLineRenderer.positionCount = 2;
         ropeLineRenderer.enabled = false;
         
-        _connectionPoint = new GameObject("RopeConnectionPoint").AddComponent<Rigidbody>();
-        _connectionPoint.isKinematic = true;
-        _connectionPoint.detectCollisions = false;
+        _defaultConnectionPoint = new GameObject("RopeConnectionPoint").AddComponent<Rigidbody>();
+        _defaultConnectionPoint.isKinematic = true;
+        _defaultConnectionPoint.detectCollisions = false;
     }
 
     void Update()
@@ -51,11 +62,33 @@ public class PlayerSwingingXR : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        if (!_attached) return;
+        
+        float distFromLastFrameHandPos = Vector3.Distance(root.localPosition, _localHandPosLastFrame);
+
+        bool pulling = distFromLastFrameHandPos >= pullDistThreshold;
+
+        if (pulling && pullTimer.Complete())
+        {
+            Vector3 dirFromLastFrameHandPos = VectorUtils.Direction(root.localPosition, _localHandPosLastFrame);
+            Vector3 dirToConnection = VectorUtils.Direction(root.position, _connectionPoint.position);
+            Vector3 combinedDir = (dirFromLastFrameHandPos + dirToConnection).normalized;
+            
+            rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
+        }
+
+        _localHandPosLastFrame = root.localPosition;
+    }
+
     void Activate()
     {
         if (!Physics.Raycast(root.position, useMouseAndKeyboard ? MainCamera.Cam.transform.forward : root.forward, out RaycastHit hit, maxAttachDistance, attachableLayers)) return;
         if (!hit.collider.TryGetComponent(out Rigidbody attachedRB))
         {
+            _connectionPoint = _defaultConnectionPoint;
+            
             _connectionPoint.MovePosition(hit.point);
             _connectionPoint.transform.position = hit.point;
             
@@ -66,13 +99,15 @@ public class PlayerSwingingXR : MonoBehaviour
         }
         else
         {
+            _connectionPoint = attachedRB;
+            
             joint.connectedBody = attachedRB;
             joint.connectedAnchor = attachedRB.transform.InverseTransformPoint(hit.point);
         }
+
+        _localHandPosLastFrame = root.localPosition;
         
-        SoftJointLimit limit = joint.linearLimit;
-        limit.limit = Vector3.Distance(transform.position, hit.point);
-        joint.linearLimit = limit;
+        SetJointLimit(Vector3.Distance(transform.position, hit.point));
         
         ropeLineRenderer.enabled = true;
         indicatorLineRenderer.enabled = false;
@@ -80,9 +115,19 @@ public class PlayerSwingingXR : MonoBehaviour
         _attached = true;
     }
 
+    void SetJointLimit(float distance)
+    {
+        SoftJointLimit limit = joint.linearLimit;
+        limit.limit = distance;
+        joint.linearLimit = limit;
+    }
+
     void Detach()
     {
-        _connectionPoint.transform.SetParent(null);
+        if (_connectionPoint == _defaultConnectionPoint)
+        {
+            _connectionPoint.transform.SetParent(null);
+        }
         
         joint.connectedBody = null;
 
