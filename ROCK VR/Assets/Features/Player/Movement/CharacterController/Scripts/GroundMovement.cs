@@ -105,7 +105,7 @@ namespace NuiN.Movement
             if (_grounded)
             {
                 _curAirJumps = 0;
-                rb.velocity = rb.velocity = rb.velocity.With(y: jumpHeight);;
+                rb.velocity = rb.velocity.With(y: jumpHeight);;
                 return;
             }
 
@@ -115,7 +115,7 @@ namespace NuiN.Movement
             // only SETS y velocity when y velocity is less than potential jump force. Otherwise it would set y vel to a lower value when going faster
             if (rb.velocity.y <= jumpHeight)
             {
-                rb.velocity = rb.velocity = rb.velocity.With(y: jumpHeight);;
+                rb.velocity = rb.velocity.With(y: jumpHeight);;
             }
             else
             {

@@ -1556,10 +1556,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5453803518092506982}
   - component: {fileID: 7067390268337059825}
+  - component: {fileID: 4848687349523860201}
   - component: {fileID: 1457268842194174316}
   - component: {fileID: 5541373077331934472}
   - component: {fileID: 2970819804410327280}
-  - component: {fileID: 4848687349523860201}
   - component: {fileID: 4228851349352444053}
   - component: {fileID: 7199680711078145188}
   - component: {fileID: 8451574136197073100}
@@ -1627,6 +1627,29 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!114 &4848687349523860201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8502157837297712684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a82fb04bb0542dcb0e25ad38567585a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 4660513857820457872}
+  maxAttachDistance: 100
+  activateAction: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  attachableLayers:
+    serializedVersion: 2
+    m_Bits: 55
+  joint: {fileID: 1142581567232847224}
+  indicatorLineRenderer: {fileID: 5820707501697578136}
+  ropeLineRenderer: {fileID: 5439086827611182268}
+  useMouseAndKeyboard: 0
 --- !u!114 &1457268842194174316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,9 +1698,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAction: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  jumpAction: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
+  jumpAction: {fileID: -2524354804938687746, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  jumpYThreshold: 0.25
   lookSensitivity: 5
 --- !u!114 &2970819804410327280
 MonoBehaviour:
@@ -1695,29 +1717,6 @@ MonoBehaviour:
   jumpKey: 32
   lookSensitivity: 5
   yRotationLimit: 88
---- !u!114 &4848687349523860201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8502157837297712684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a82fb04bb0542dcb0e25ad38567585a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  root: {fileID: 4660513857820457872}
-  maxAttachDistance: 100
-  activateAction: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  attachableLayers:
-    serializedVersion: 2
-    m_Bits: 55
-  joint: {fileID: 1142581567232847224}
-  indicatorLineRenderer: {fileID: 5820707501697578136}
-  ropeLineRenderer: {fileID: 5439086827611182268}
-  useMouseAndKeyboard: 1
 --- !u!114 &4228851349352444053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,7 +1891,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8502157837297712684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

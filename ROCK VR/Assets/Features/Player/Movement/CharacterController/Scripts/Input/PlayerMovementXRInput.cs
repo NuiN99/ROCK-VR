@@ -9,7 +9,7 @@ public class PlayerMovementXRInput : MonoBehaviour, IMovementInput
     [SerializeField] InputActionReference rotationAction;
     [SerializeField] InputActionReference jumpAction;
 
-    [SerializeField] float jumpYThreshold = 0.25f;
+    //[SerializeField] float jumpYThreshold = 0.25f;
     [SerializeField] float lookSensitivity = 20f;
 
     void Awake()
@@ -20,7 +20,8 @@ public class PlayerMovementXRInput : MonoBehaviour, IMovementInput
 
     bool IMovementInput.ShouldJump()
     {
-        return jumpAction.action.ReadValue<Vector2>().y >= jumpYThreshold;
+        return jumpAction.action.WasPressedThisFrame();
+        //return jumpAction.action.ReadValue<Vector2>().y >= jumpYThreshold;
     }
 
     Vector3 IMovementInput.GetDirection()
