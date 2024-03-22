@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1853547368955982680}
   - component: {fileID: 8759204925493648432}
   - component: {fileID: 472990191385396122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3624055438751476922}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 2553738831304827521}
   - component: {fileID: 2719152726631745465}
   - component: {fileID: 3360444537518490239}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 3899516003132336326}
   - component: {fileID: 7878675835314570619}
   - component: {fileID: 4092945977770884649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 9119055456423966331}
   - component: {fileID: 8939310015132259288}
   - component: {fileID: 7112106124084088359}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 5820707501697578136}
   - component: {fileID: 4890259214073219663}
   - component: {fileID: 5420124766700179764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1453,7 @@ GameObject:
   - component: {fileID: 3050833035681468790}
   - component: {fileID: 9051270515678250333}
   - component: {fileID: 1428439178663378800}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

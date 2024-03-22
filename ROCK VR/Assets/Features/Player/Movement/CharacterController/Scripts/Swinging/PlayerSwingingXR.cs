@@ -75,6 +75,11 @@ public class PlayerSwingingXR : MonoBehaviour
             Vector3 dirFromLastFrameHandPos = VectorUtils.Direction(root.localPosition, _localHandPosLastFrame);
             Vector3 dirToConnection = VectorUtils.Direction(root.position, _connectionPoint.position);
             Vector3 combinedDir = (dirFromLastFrameHandPos + dirToConnection).normalized;
+
+            if (_connectionPoint != _defaultConnectionPoint)
+            {
+                _connectionPoint.AddForce(-dirToConnection * pullForce);
+            }
             
             rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
         }
