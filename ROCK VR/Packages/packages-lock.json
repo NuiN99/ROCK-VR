@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "ab8159a3f352235d2eb7f1c604d2a199700a643a"
     },
+    "com.meta.xr.sdk.core": {
+      "version": "62.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.nuin.scriptableharmony": {
       "version": "https://github.com/NuiN99/Scriptable-Harmony-Package.git",
       "depth": 0,

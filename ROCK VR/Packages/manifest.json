@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.gasgiant.camera-shake": "https://github.com/gasgiant/Camera-Shake.git#upm",
+    "com.meta.xr.sdk.core": "62.0.0",
     "com.nuin.scriptableharmony": "https://github.com/NuiN99/Scriptable-Harmony-Package.git",
     "com.nuin.spleentween": "https://github.com/NuiN99/SpleenTween-Package.git",
     "com.unity.ide.rider": "3.0.26",
