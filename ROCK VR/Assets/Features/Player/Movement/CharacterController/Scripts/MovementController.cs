@@ -30,7 +30,7 @@ namespace NuiN.Movement
         void Awake()
         {
             _movement = movement.Value;
-            _input = useMouseAndKeyboard ? vrInput.Value : input.Value;
+            _input = useMouseAndKeyboard ? input.Value : vrInput.Value;
             
             if(movement == null) Debug.LogError($"Missing Movement component on {gameObject}", gameObject);
             if (input == null) Debug.LogError($"Missing MovementInput on {gameObject.name}", gameObject);
