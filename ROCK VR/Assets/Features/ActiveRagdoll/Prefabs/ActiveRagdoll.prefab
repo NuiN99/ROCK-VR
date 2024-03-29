@@ -97,12 +97,12 @@ MonoBehaviour:
   leftFootPhysical: {fileID: 4810085216117755896}
   rightFootPhysical: {fileID: 7649781586655868853}
   animator: {fileID: 4518037577090555565}
-  walkAnim: {fileID: 7400000, guid: 400bc9ac559653249b2f4e5e139e5ced, type: 2}
-  getUpFromBackDownAnim: {fileID: 7400000, guid: 1a7263a0715ac674f97835b400b467c0,
+  walkAnim: {fileID: 7400000, guid: 7e167c3dfd01f1e4a9f95b897038435a, type: 2}
+  getUpFromBackDownAnim: {fileID: 7400000, guid: cfe342bceab425b449311f2764eff2a0,
     type: 2}
-  getUpFromFaceDownAnim: {fileID: 7400000, guid: 2f6cb2d7621578b4a91664be88a4b7e0,
+  getUpFromFaceDownAnim: {fileID: 7400000, guid: a7051389af4c6c34ab40c5b3fcfe653a,
     type: 2}
-  idleAnim: {fileID: 7400000, guid: fe59e045876a09f43a713697f30f6cfd, type: 2}
+  idleAnim: {fileID: 7400000, guid: f1a338a16e96a18488e3f0e43b5a729d, type: 2}
   limbs:
   - <RB>k__BackingField: {fileID: 7644031301708326037}
     <Target>k__BackingField: {fileID: 8492033335586670999}
