@@ -913,7 +913,7 @@ MonoBehaviour:
     type: 3}
   attachableLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 119
   joint: {fileID: 1142581567232847224}
   indicatorLineRenderer: {fileID: 7899995540545107197}
   ropeLineRenderer: {fileID: 5439086827611182268}
