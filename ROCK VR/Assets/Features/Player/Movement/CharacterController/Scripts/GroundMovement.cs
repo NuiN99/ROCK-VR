@@ -8,6 +8,8 @@ namespace NuiN.Movement
         int _curAirJumps;
         bool _grounded;
 
+        public bool disableGroundDrag = false;
+
         [Header("Dependencies")] 
         [SerializeField] Transform feet;
 
@@ -80,9 +82,9 @@ namespace NuiN.Movement
             }
             else
             {
-                // account for ground drag
+                rb.drag = !disableGroundDrag ? groundDrag : airDrag;
+                
                 moveVector *= groundSpeedMult;
-                rb.drag = groundDrag;
                 _curAirJumps = 0;
             }
     
@@ -120,6 +122,22 @@ namespace NuiN.Movement
             else
             {
                 rb.velocity += Vector3.up * jumpHeight;
+            }
+        }
+
+        void OnCollisionEnter()
+        {
+            disableGroundDrag = false;
+        }
+
+        void OnDrawGizmos()
+        {
+            if (feet == null) return;
+            
+            Gizmos.DrawLine(feet.position, feet.position + Vector3.down * groundCheckDist);
+            if (Physics.Raycast(feet.position, Vector3.down, out RaycastHit hit, groundCheckDist, groundMask))
+            {
+                Gizmos.DrawSphere(hit.point, 0.05f);
             }
         }
     }

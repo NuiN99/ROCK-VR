@@ -19,7 +19,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e2470c7b8ddf42fff007b000cd416edaa0ebdbb3"
+      "hash": "fcb85359b60021c4511b95e3ed7e317f1a32ad7d"
     },
     "com.nuin.spleentween": {
       "version": "https://github.com/NuiN99/SpleenTween-Package.git",

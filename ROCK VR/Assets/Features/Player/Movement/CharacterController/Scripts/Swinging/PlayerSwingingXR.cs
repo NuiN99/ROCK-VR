@@ -1,4 +1,6 @@
-﻿using NuiN.NExtensions;
+﻿using NuiN.Movement;
+using NuiN.NExtensions;
+using SpleenTween;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,8 +14,12 @@ public class PlayerSwingingXR : MonoBehaviour
     float _distFromStartHandLocalPosLastFrame;
     Vector3 _localHandPosLastFrame;
 
+    GroundMovement _groundMovement;
+
     [SerializeField] SimpleTimer pullTimer;
     [SerializeField] float pullDistThreshold = 0.1f;
+
+    [SerializeField] float zeroDragDurationAfterPull;
 
     [SerializeField] Transform root;
     
@@ -34,11 +40,16 @@ public class PlayerSwingingXR : MonoBehaviour
     
     void Awake()
     {
+        _groundMovement = GetComponent<GroundMovement>();
+        _defaultConnectionPoint = new GameObject("RopeConnectionPoint").AddComponent<Rigidbody>();
+    }
+
+    void Start()
+    {
         indicatorLineRenderer.positionCount = 2;
         ropeLineRenderer.positionCount = 2;
         ropeLineRenderer.enabled = false;
         
-        _defaultConnectionPoint = new GameObject("RopeConnectionPoint").AddComponent<Rigidbody>();
         _defaultConnectionPoint.isKinematic = true;
         _defaultConnectionPoint.detectCollisions = false;
     }
@@ -51,14 +62,6 @@ public class PlayerSwingingXR : MonoBehaviour
         if (!_attached)
         {
             joint.connectedAnchor = root.position;
-            
-            indicatorLineRenderer.SetPosition(0, root.position);
-            indicatorLineRenderer.SetPosition(1, root.position + root.forward * maxAttachDistance);
-        }
-        else
-        {
-            ropeLineRenderer.SetPosition(0, root.position);
-            ropeLineRenderer.SetPosition(1, _connectionPoint.position);
         }
     }
 
@@ -80,11 +83,28 @@ public class PlayerSwingingXR : MonoBehaviour
             {
                 _connectionPoint.AddForce(-dirToConnection * pullForce);
             }
+
+            _groundMovement.disableGroundDrag = true;
+            Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
             
             rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
         }
 
         _localHandPosLastFrame = root.localPosition;
+    }
+
+    void LateUpdate()
+    {
+        if (!_attached)
+        {
+            indicatorLineRenderer.SetPosition(0, root.position);
+            indicatorLineRenderer.SetPosition(1, root.position + root.forward * maxAttachDistance);
+        }
+        else
+        {
+            ropeLineRenderer.SetPosition(0, root.position);
+            ropeLineRenderer.SetPosition(1, _connectionPoint.position);
+        }
     }
 
     void Activate()
