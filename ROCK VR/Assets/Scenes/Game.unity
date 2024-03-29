@@ -5895,6 +5895,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 792977626002048068, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015396537
+      objectReference: {fileID: 0}
+    - target: {fileID: 902520409978866984, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.038491298
+      objectReference: {fileID: 0}
     - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5945,10 +5955,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2645961345429350988, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.038491298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276223772277173876, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.023094814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753329480979763755, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: totalMass
+      value: 4.355331
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753329480979763755, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: massIncrement
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5755826528462820276, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015396537
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322188697799668663, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.023094814
+      objectReference: {fileID: 0}
     - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
         type: 3}
       propertyPath: m_Name
       value: Caveman_ActiveRagdoll
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726297825143517685, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015396537
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827864965908137264, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.023094814
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336284276058205316, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.023094814
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452264641501187457, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015396537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985934408777020765, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015396537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

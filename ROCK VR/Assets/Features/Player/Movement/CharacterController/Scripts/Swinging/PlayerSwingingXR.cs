@@ -81,13 +81,7 @@ public class PlayerSwingingXR : MonoBehaviour
 
                 if (_connectionPoint != _defaultConnectionPoint)
                 {
-                    float forceMult = 1f;
-                    if (_connectionPoint.gameObject.layer == LayerMask.NameToLayer("Caveman"))
-                    {
-                        forceMult = 100f;
-                    }
-
-                    _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * (pullForce * forceMult));
+                    _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * pullForce);
                 }
 
                 _groundMovement.disableGroundDrag = true;

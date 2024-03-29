@@ -9,6 +9,9 @@ using Debug = UnityEngine.Debug;
 public class ActiveRagdoll : MonoBehaviour
 {
     bool _fullRagdoll;
+
+    [SerializeField, ReadOnly] float totalMass;
+    [SerializeField] float massIncrement = 0.1f;
     
     [Header("Force Settings")]
     [SerializeField] float globalMoveForce = 0.7f;
@@ -43,7 +46,33 @@ public class ActiveRagdoll : MonoBehaviour
     
     [Header("Limb Force")]
     [SerializeField] FollowLimb[] limbs;
-    
+
+    void ValidateMass()
+    {
+        totalMass = limbs.Sum(limb => limb.RB.mass);
+    }
+
+    [MethodButton("Increase Total Mass")]
+    void IncreaseTotalMass()
+    {
+        foreach (var limb in limbs)
+        {
+            limb.RB.mass *= (1 + massIncrement);
+        }
+        
+        totalMass = limbs.Sum(limb => limb.RB.mass);
+    }
+    [MethodButton("Decrease Total Mass")]
+    void DecreaseTotalMass()
+    {
+        foreach (var limb in limbs)
+        {
+            limb.RB.mass *= (1 - massIncrement);
+        }
+        
+        totalMass = limbs.Sum(limb => limb.RB.mass);
+    }
+
     void Start()
     {
         animator.Play(idleAnim, 1f).Force();
