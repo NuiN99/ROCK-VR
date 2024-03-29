@@ -67,34 +67,36 @@ public class PlayerSwingingXR : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_attached) return;
-        
-        float distFromLastFrameHandPos = Vector3.Distance(root.localPosition, _localHandPosLastFrame);
-
-        bool pulling = distFromLastFrameHandPos >= pullDistThreshold;
-
-        if (pulling && pullTimer.Complete())
+        if (_attached)
         {
-            Vector3 dirFromLastFrameHandPos = VectorUtils.Direction(root.localPosition, _localHandPosLastFrame);
-            Vector3 dirToConnection = VectorUtils.Direction(root.position, _connectionPoint.position);
-            Vector3 combinedDir = (dirFromLastFrameHandPos + dirToConnection).normalized;
+            float distFromLastFrameHandPos = Vector3.Distance(root.localPosition, _localHandPosLastFrame);
 
-            if (_connectionPoint != _defaultConnectionPoint)
+            bool pulling = distFromLastFrameHandPos >= pullDistThreshold;
+
+            if (pulling && pullTimer.Complete())
             {
-                float forceMult = 1f;
-                if (_connectionPoint.gameObject.layer == LayerMask.NameToLayer("Caveman"))
+                Vector3 dirFromLastFrameHandPos = transform.TransformDirection(VectorUtils.Direction(root.localPosition, _localHandPosLastFrame));
+                Vector3 dirToConnection = VectorUtils.Direction(root.position, _connectionPoint.position);
+                Vector3 combinedDir = (dirFromLastFrameHandPos + dirToConnection).normalized;
+
+                if (_connectionPoint != _defaultConnectionPoint)
                 {
-                    forceMult = 100f;
+                    float forceMult = 1f;
+                    if (_connectionPoint.gameObject.layer == LayerMask.NameToLayer("Caveman"))
+                    {
+                        forceMult = 100f;
+                    }
+
+                    _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * (pullForce * forceMult));
                 }
-                _connectionPoint.AddForce(-dirToConnection * (pullForce * forceMult));
-            }
 
-            _groundMovement.disableGroundDrag = true;
-            Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
+                _groundMovement.disableGroundDrag = true;
+                Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
             
-            rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
+                rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
+            }
         }
-
+        
         _localHandPosLastFrame = root.localPosition;
     }
 
@@ -170,7 +172,11 @@ public class PlayerSwingingXR : MonoBehaviour
     void OnDrawGizmos()
     {
         if (!Application.isPlaying) return;
-        
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.TransformPoint(_localHandPosLastFrame), 0.1f);
+        Gizmos.color = Color.white;
+
         if (_attached)
         {
             Gizmos.color = Color.green;
