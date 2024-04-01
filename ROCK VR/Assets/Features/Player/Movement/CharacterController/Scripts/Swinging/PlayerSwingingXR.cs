@@ -63,6 +63,10 @@ public class PlayerSwingingXR : MonoBehaviour
         {
             joint.connectedAnchor = root.position;
         }
+        else
+        {
+            joint.anchor = root.localPosition;
+        }
     }
 
     void FixedUpdate()
