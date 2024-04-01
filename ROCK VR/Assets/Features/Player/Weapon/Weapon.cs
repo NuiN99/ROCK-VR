@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     Vector3 lastPosition;
     Vector3 currentPosition;
 
-    private void Update()
+    private void FixedUpdate()
     {
         lastPosition = currentPosition;
         currentPosition = transform.position;
@@ -18,13 +18,13 @@ public class Weapon : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Health>(out Health health))
         {
-            float impactSpeed = getImpactSpeed(lastPosition, currentPosition);
+            float impactSpeed = GetImpactSpeed(lastPosition, currentPosition);
             Debug.Log("Impact Speed: " + impactSpeed);
-            health.takeDamage(weaponDamage * impactSpeed);
+            health.TakeDamage(weaponDamage * impactSpeed);
         }
     }
 
-    private float getImpactSpeed(Vector3 lastPos, Vector3 currentPos)
+    private float GetImpactSpeed(Vector3 lastPos, Vector3 currentPos)
     {
         float speed =  (currentPos - lastPos).magnitude;
         return speed;
