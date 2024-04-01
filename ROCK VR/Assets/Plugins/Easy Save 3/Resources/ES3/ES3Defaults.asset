@@ -34,8 +34,6 @@ MonoBehaviour:
     - Animancer.FSM
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - Meta.XR.BuildingBlocks
-    - Oculus.VR
     - TNRD.SerializableInterface
     - Unity.XR.Interaction.Toolkit.Samples.StarterAssets
     showAdvancedSettings: 0
