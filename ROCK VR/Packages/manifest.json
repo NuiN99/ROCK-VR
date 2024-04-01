@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.gasgiant.camera-shake": "https://github.com/gasgiant/Camera-Shake.git#upm",
-    "com.meta.xr.sdk.core": "62.0.0",
     "com.nuin.scriptableharmony": "https://github.com/NuiN99/Scriptable-Harmony-Package.git",
     "com.nuin.spleentween": "https://github.com/NuiN99/SpleenTween-Package.git",
     "com.unity.ide.rider": "3.0.26",
@@ -16,6 +15,7 @@
     "com.unity.xr.interaction.toolkit": "2.5.3",
     "com.unity.xr.management": "4.4.1",
     "com.unity.xr.oculus": "4.2.0",
+    "com.unity.xr.openxr": "1.9.1",
     "net.tnrd.serializableinterface": "https://github.com/Thundernerd/Unity3D-SerializableInterface.git",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
