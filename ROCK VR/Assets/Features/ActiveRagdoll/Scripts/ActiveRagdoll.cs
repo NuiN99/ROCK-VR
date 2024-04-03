@@ -72,6 +72,22 @@ public class ActiveRagdoll : MonoBehaviour
         
         totalMass = limbs.Sum(limb => limb.RB.mass);
     }
+    [MethodButton("Set Dynamic")]
+    void SetDynamic()
+    {
+        foreach (var limb in limbs)
+        {
+            limb.RB.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        }
+    }
+    [MethodButton("Set Discrete")]
+    void SetDiscrete()
+    {
+        foreach (var limb in limbs)
+        {
+            limb.RB.collisionDetectionMode = CollisionDetectionMode.Discrete;
+        }
+    }
 
     void Start()
     {

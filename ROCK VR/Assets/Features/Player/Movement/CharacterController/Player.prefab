@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3893497075683539380}
   - component: {fileID: 6025810181091063557}
   - component: {fileID: 790238532428270385}
-  - component: {fileID: 672805953097658883}
   m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &672805953097658883
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2889385192527622625}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2933547483142374643
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +125,6 @@ GameObject:
   - component: {fileID: 493064614796753428}
   - component: {fileID: 8373753364941845080}
   - component: {fileID: 8738899942397156564}
-  - component: {fileID: 3660514769065124666}
   m_Layer: 3
   m_Name: Collider
   m_TagString: Untagged
@@ -220,27 +197,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3660514769065124666
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210790592287177899}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3407220304753033471
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +939,6 @@ GameObject:
   - component: {fileID: 1457268842194174316}
   - component: {fileID: 5541373077331934472}
   - component: {fileID: 2970819804410327280}
-  - component: {fileID: 4228851349352444053}
   - component: {fileID: 7199680711078145188}
   - component: {fileID: 8451574136197073100}
   - component: {fileID: 1142581567232847224}
@@ -1080,7 +1035,7 @@ MonoBehaviour:
     type: 3}
   attachableLayers:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 631
   joint: {fileID: 1142581567232847224}
   indicatorLineRenderer: {fileID: 7899995540545107197}
   ropeLineRenderer: {fileID: 5439086827611182268}
@@ -1157,21 +1112,6 @@ MonoBehaviour:
   jumpKey: 32
   lookSensitivity: 5
   yRotationLimit: 88
---- !u!114 &4228851349352444053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8502157837297712684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8f4378b5c4839408a5cc5d801cc405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dotTexture: {fileID: 2800000, guid: 79aba0b290c471c4ba3d3f818d4e9b15, type: 3}
-  verticalOffset: 0
-  size: 75
 --- !u!136 &7199680711078145188
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1185,16 +1125,16 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 638
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.23132896
-  m_Height: 1.5
+  m_Radius: 0.29
+  m_Height: 0
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: -0.26867104}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8451574136197073100
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1527,7 +1467,7 @@ MonoBehaviour:
     m_ConstantValue:
       m_AllowFreeXMovement: 1
       m_AllowFreeYMovement: 1
-      m_AllowFreeZMovement: 0
+      m_AllowFreeZMovement: 1
     m_Variable: {fileID: 0}
 --- !u!114 &240324632650568597
 MonoBehaviour:
@@ -1542,7 +1482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Timeout: 10
-  m_XROrigin: {fileID: 0}
+  m_XROrigin: {fileID: 3686789437139395813}
 --- !u!1 &8514101548786980370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1508,7 @@ Transform:
   m_GameObject: {fileID: 8514101548786980370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7, z: 0}
+  m_LocalPosition: {x: 0, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
