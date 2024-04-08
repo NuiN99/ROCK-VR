@@ -1166,8 +1166,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728d33158601a4049a26c2ed61679b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currenthealth: 0
-  _maxHealth: 100
+  damageable:
+    mode: 0
+    unityReference: {fileID: 0}
+    rawReference:
+      rid: -2
+  currenthealth: 0
+  maxHealth: 100
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,6 +2339,7 @@ GameObject:
   - component: {fileID: 608198447}
   - component: {fileID: 608198446}
   - component: {fileID: 608198451}
+  - component: {fileID: 608198452}
   m_Layer: 9
   m_Name: Cube_1
   m_TagString: Untagged
@@ -2601,6 +2612,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &608198452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608198445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feafccadb6cba4949b4116a51fbb6ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDamage: 10
 --- !u!1 &631251261
 GameObject:
   m_ObjectHideFlags: 0

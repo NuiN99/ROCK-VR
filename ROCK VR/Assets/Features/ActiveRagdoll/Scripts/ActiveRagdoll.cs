@@ -133,6 +133,20 @@ public class ActiveRagdoll : MonoBehaviour
         StartCoroutine(GetUpAfterDelay(getUpAfterRagdolledDelay));
     }
 
+    public void AddForceInDirection(Vector3 direction, float amount)
+    {
+        foreach (var limb in limbs)
+        {
+            limb.RB.AddForce(direction * amount, ForceMode.Impulse);
+        }
+    }
+
+    public void PermaRagdoll()
+    {
+        animator.Stop();
+        _fullRagdoll = true;
+    }
+
     IEnumerator GetUpAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

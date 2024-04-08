@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using NuiN.NExtensions;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] float weaponDamage = 50;
-    Vector3 lastPosition;
-    Vector3 currentPosition;
+    Vector3 _lastPosition;
+    Vector3 _currentPosition;
 
     private void FixedUpdate()
     {
-        lastPosition = currentPosition;
-        currentPosition = transform.position;
+        _lastPosition = _currentPosition;
+        _currentPosition = transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<Health>(out Health health))
+        if (collision.gameObject.TryGetComponent(out IHealth health))
         {
-            float impactSpeed = GetImpactSpeed(lastPosition, currentPosition);
+            float impactSpeed = GetImpactSpeed(_lastPosition, _currentPosition);
             Debug.Log("Impact Speed: " + impactSpeed);
-            health.TakeDamage(weaponDamage * impactSpeed);
+            health.TakeDamage(weaponDamage * impactSpeed, VectorUtils.Direction(_lastPosition, _currentPosition));
         }
     }
 

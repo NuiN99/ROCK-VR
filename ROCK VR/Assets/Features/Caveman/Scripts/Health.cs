@@ -1,26 +1,34 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TNRD;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, IHealth
 {
-    [SerializeField] float _currenthealth;
-    [SerializeField] float _maxHealth = 100;
+    [SerializeField] SerializableInterface<IDamageable> damageable;
+    [SerializeField] float currenthealth;
+    [SerializeField] float maxHealth = 100;
+    
+    public bool Dead { get; private set; }
 
-    private void Start()
+    void Start()
     {
-        _currenthealth = _maxHealth;
+        currenthealth = maxHealth;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 direction)
     {
-        _currenthealth -= damage;
-        if (_currenthealth <= 0) 
+        if (Dead) return;
+        
+        currenthealth -= damage;
+        damageable.Value.Damaged(damage, direction);
+            
+        if (currenthealth <= 0)
         {
-            Debug.Log(gameObject.name + " has died.");                        
+            damageable.Value.Died();
+            Dead = true;
         } 
-        else Debug.Log(gameObject.name + " has " + _currenthealth + " remaining.");
+        else Debug.Log(gameObject.name + " has " + currenthealth + " remaining.");
     }
-
 }
