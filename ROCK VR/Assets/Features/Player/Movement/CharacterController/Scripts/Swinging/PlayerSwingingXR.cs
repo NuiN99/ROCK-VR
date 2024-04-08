@@ -86,12 +86,14 @@ public class PlayerSwingingXR : MonoBehaviour
                 if (_connectionPoint != _defaultConnectionPoint)
                 {
                     _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * pullForce);
-                }
 
-                _groundMovement.disableGroundDrag = true;
-                Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
-            
-                rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
+                    _groundMovement.disableGroundDrag = true;
+                    Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
+                }
+                else
+                {
+                    rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
+                }
             }
         }
         
