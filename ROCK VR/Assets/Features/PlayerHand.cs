@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Animancer;
 using NuiN.NExtensions;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,14 +13,19 @@ public class PlayerHand : MonoBehaviour
     
     [Header("Physical Properties")]
     [SerializeField] Rigidbody physicalHand;
-
     [SerializeField] float springStrength = 25f;
     [SerializeField] float springDamper = 5f;
     [SerializeField] float rotationSpringStrength = 25f;
     [SerializeField] float rotationDamperStrength = 5f;
-    
+
+    [Header("Animation")] 
+    [SerializeField] AnimancerComponent animator;
+    [SerializeField] AnimationClip openedAnim;
+    [SerializeField] AnimationClip closedAnim;
+    [SerializeField] float openFadeTime = 0.1f;
+    [SerializeField] float closeFadeTime = 0.1f;
+
     ConfigurableJoint _grabJoint;
-    
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
 
@@ -59,6 +65,8 @@ public class PlayerHand : MonoBehaviour
     
     void Grab(InputAction.CallbackContext context)
     {
+        animator.Play(closedAnim, closeFadeTime).Force();
+        
         Collider[] hits = Physics.OverlapSphere(transform.position, col.radius, grabMask);
         if (hits.Length <= 0) return;
         
@@ -100,6 +108,8 @@ public class PlayerHand : MonoBehaviour
 
     void Release(InputAction.CallbackContext context)
     {
+        animator.Play(openedAnim, openFadeTime).Force();
+        
         if (_grabbedRB == null) return;
 
         Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
