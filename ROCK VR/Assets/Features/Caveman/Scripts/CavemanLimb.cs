@@ -22,9 +22,9 @@ public class CavemanLimb : MonoBehaviour, IDamageable
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.collider.TryGetComponent(out Rigidbody rb))
+        /*if (other.collider.TryGetComponent(out Rigidbody rb))
         {
             Damaged(rb.mass, rb.velocity.normalized);
-        }
+        }*/
     }
 }
