@@ -17,7 +17,8 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] float springDamper = 5f;
     [SerializeField] float rotationSpringStrength = 25f;
     [SerializeField] float rotationDamperStrength = 5f;
-    
+
+    [SerializeField] FixedJoint fixedJoint;
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
 
@@ -57,9 +58,7 @@ public class PlayerHand : MonoBehaviour
         if (!context.performed) return;
         if (_grabbedRB != null)
         {
-            _grabbedRB.transform.parent = null;
-            _grabbedRB.isKinematic = false;
-            _grabbedRB.useGravity = true;
+            fixedJoint.connectedBody = null;
             _grabbedRB = null;
             return;
         }
@@ -78,10 +77,9 @@ public class PlayerHand : MonoBehaviour
         }
         
         if (hitBodies.Count <= 0) return;
+        
         _grabbedRB = GeneralUtils.GetClosest(transform.position, hitBodies);
-
-        _grabbedRB.useGravity = false;
-        _grabbedRB.isKinematic = true;
-        _grabbedRB.transform.parent = physicalHand.transform;
+        fixedJoint.connectedBody = _grabbedRB;
+        fixedJoint.connectedAnchor = _grabbedRB.transform.position;
     }
 }
