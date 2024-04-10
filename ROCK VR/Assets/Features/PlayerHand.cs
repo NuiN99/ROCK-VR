@@ -124,7 +124,7 @@ public class PlayerHand : MonoBehaviour
 
         _grabJoint.enableCollision = false;
         
-        Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), true);
+        //Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), true);
         
         Debug.Log("Player Grabbed: " + _grabbedRB.name);
     }
@@ -135,7 +135,7 @@ public class PlayerHand : MonoBehaviour
         
         if (_grabbedRB == null) return;
 
-        Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
+        //Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
         
         Destroy(_grabJoint);
         _grabbedRB = null;
