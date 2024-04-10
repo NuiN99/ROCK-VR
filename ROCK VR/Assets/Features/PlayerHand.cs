@@ -54,9 +54,28 @@ public class PlayerHand : MonoBehaviour
             Vector3.Cross(physicalHand.transform.forward, transform.forward) + 
             Vector3.Cross(physicalHand.transform.right, transform.right);
         var springTorque = rotationSpringStrength * rotation;
-        var dampTorque = rotationDamperStrength * -physicalHand.velocity;
+        var dampTorque = rotationDamperStrength * -physicalHand.angularVelocity;
         
         physicalHand.AddTorque((springTorque + dampTorque), ForceMode.Acceleration);
+        
+        Quaternion targetRotation = transform.rotation;
+        Quaternion currentRotation = physicalHand.transform.rotation;
+
+        // QUATERNION IMPLEMENTATION
+        /*Quaternion rotationDifference = targetRotation * Quaternion.Inverse(currentRotation);
+
+        rotationDifference.ToAngleAxis(out float angle, out Vector3 axis);
+
+        if (angle > 180)
+            angle -= 360;
+
+        angle *= Mathf.Deg2Rad;
+
+        Vector3 springTorque = angle * axis.normalized * rotationSpringStrength;
+
+        Vector3 dampTorque = -rotationDamperStrength * physicalHand.angularVelocity;
+
+        physicalHand.AddTorque(springTorque + dampTorque, ForceMode.Acceleration);*/
     }
     
     void ApplySpringForce()

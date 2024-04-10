@@ -8,7 +8,7 @@ public class Caveman : MonoBehaviour, IDamageable
     
     void IDamageable.Damaged(float amount, Vector3 direction)
     {
-        //ragdoll.AddForceInDirection(direction, amount);
+        
     }
 
     void IDamageable.Died()

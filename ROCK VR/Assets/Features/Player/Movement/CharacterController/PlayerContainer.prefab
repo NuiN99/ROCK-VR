@@ -296,7 +296,7 @@ MonoBehaviour:
   springStrength: 3000
   springDamper: 25
   rotationSpringStrength: 5000
-  rotationDamperStrength: 5
+  rotationDamperStrength: 50
   animator: {fileID: 1833724821552859510}
   openedAnim: {fileID: 7400000, guid: 7ef9df2027fc64f41b3d227ec09318ff, type: 2}
   closedAnim: {fileID: 7400000, guid: a6f8b91b7ae6a96409fe70e9728b355e, type: 2}
@@ -944,7 +944,7 @@ MonoBehaviour:
   springStrength: 3000
   springDamper: 25
   rotationSpringStrength: 5000
-  rotationDamperStrength: 5
+  rotationDamperStrength: 50
   animator: {fileID: 5543333956662495883}
   openedAnim: {fileID: 7400000, guid: 7ef9df2027fc64f41b3d227ec09318ff, type: 2}
   closedAnim: {fileID: 7400000, guid: a6f8b91b7ae6a96409fe70e9728b355e, type: 2}

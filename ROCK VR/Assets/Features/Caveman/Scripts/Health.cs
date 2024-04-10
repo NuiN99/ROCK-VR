@@ -28,7 +28,8 @@ public class Health : MonoBehaviour, IHealth
         {
             damageable.Value.Died();
             Dead = true;
+            Debug.Log($"<color=green>{gameObject.name}</color> | <color=black>Died</color>", gameObject);
         } 
-        else Debug.Log(gameObject.name + " has " + currenthealth + " remaining.");
+        else Debug.Log($"<color=green>{gameObject.name}</color> | <color=red>{currenthealth}</color> Health", gameObject);
     }
 }

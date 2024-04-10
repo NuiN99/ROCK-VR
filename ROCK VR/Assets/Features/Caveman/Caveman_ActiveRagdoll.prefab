@@ -138,6 +138,8 @@ MonoBehaviour:
   getUpFromFaceDownAnim: {fileID: 7400000, guid: a7051389af4c6c34ab40c5b3fcfe653a,
     type: 2}
   idleAnim: {fileID: 7400000, guid: f1a338a16e96a18488e3f0e43b5a729d, type: 2}
+  getUpFromBackDownAnimSpeed: 0.75
+  getUpFromFaceDownAnimSpeed: 1
   limbs:
   - <RB>k__BackingField: {fileID: 792977626002048068}
     <Target>k__BackingField: {fileID: 2663570140793448101}
@@ -825,10 +827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 1112908287037449673}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -848,6 +851,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 3384423274324345392}
+    rawReference:
+      rid: -2
+  rb: {fileID: 7452264641501187457}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &851956469786571216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -290750445479886849, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -962,10 +977,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 0.5
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 5402488928861684654}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -985,6 +1001,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 100752250157540840}
+    rawReference:
+      rid: -2
+  rb: {fileID: 5755826528462820276}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &940703173086929448 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -203856693384778745, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1010,8 +1038,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6751137, y: 0.53028405, z: 0.43213218}
-  m_Center: {x: 0.000003933442, y: 0.2651423, z: -0.0005957484}
+  m_Size: {x: 0.6015909, y: 0.519096, z: 0.32237783}
+  m_Center: {x: 0.00630021, y: 0.25954807, z: 0.014775486}
 --- !u!54 &2645961345429350988
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1097,10 +1125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 2113322937008108731}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1120,6 +1149,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 4794191348786842899}
+    rawReference:
+      rid: -2
+  rb: {fileID: 2645961345429350988}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &1685072469764099403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1781356600409242780, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1232,10 +1273,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 2
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 3532384268400864706}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1255,6 +1297,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 4906671318514077281}
+    rawReference:
+      rid: -2
+  rb: {fileID: 792977626002048068}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &2670365369257179812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1369,10 +1423,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 9004813394000637909}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1392,6 +1447,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 858151540867396902}
+    rawReference:
+      rid: -2
+  rb: {fileID: 6827864965908137264}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &3745569812616274791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4332706925441422008, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1506,10 +1573,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 0.5
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 8496822090590311085}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1529,6 +1597,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 6764204274597450987}
+    rawReference:
+      rid: -2
+  rb: {fileID: 7336284276058205316}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!4 &4323216319687690576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5465940246521907071, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1649,10 +1729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 0.5
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 8168887970845450920}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1672,6 +1753,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 6538724799888859550}
+    rawReference:
+      rid: -2
+  rb: {fileID: 6726297825143517685}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!4 &5817907837820817438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6874584590210671055, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1792,10 +1885,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 0.5
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 3196282542995809191}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1815,6 +1909,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 2895037394331357881}
+    rawReference:
+      rid: -2
+  rb: {fileID: 4276223772277173876}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &6602499262385947650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -1929,10 +2035,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 6583631975403420064}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -1952,6 +2059,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 8666029040719482137}
+    rawReference:
+      rid: -2
+  rb: {fileID: 6322188697799668663}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &8231154723269528681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9070493210130169274, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -2066,10 +2185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 4951058564497517204}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -2089,6 +2209,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 7100006820562170379}
+    rawReference:
+      rid: -2
+  rb: {fileID: 7985934408777020765}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!4 &8624240020068657604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45df29892a310d34e87a9c065fd3fd19,
@@ -2126,8 +2258,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6751137, y: 0.43788853, z: 0.43196958}
-  m_Center: {x: 0.00000059604645, y: 0.12935995, z: -0.0098737925}
+  m_Size: {x: 0.5269926, y: 0.43788853, z: 0.2884482}
+  m_Center: {x: 0.0083890855, y: 0.12935995, z: 0.0031444952}
 --- !u!54 &902520409978866984
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2167,10 +2299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2032e2f524158b89925b625172236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMult: 1
   realHealth: {fileID: 1786770521182418742}
   damageable:
-    mode: 0
-    unityReference: {fileID: 3971693634750817883}
+    mode: 1
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   references:
@@ -2190,6 +2323,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d6fc92fe457b24494d7855d6f3db1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 5753329480979763755}
+  health:
+    mode: 0
+    unityReference: {fileID: 5657618812071746707}
+    rawReference:
+      rid: -2
+  rb: {fileID: 902520409978866984}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1001 &8435467932014531533
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,9 +6,13 @@ using NuiN.NExtensions;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
+[SelectionBase]
 public class ActiveRagdoll : MonoBehaviour
 {
+    public bool Ragdolling => _fullRagdoll;
+    
     bool _fullRagdoll;
+    bool _dead;
 
     [SerializeField, ReadOnly] float totalMass;
     [SerializeField] float massIncrement = 0.1f;
@@ -43,6 +47,8 @@ public class ActiveRagdoll : MonoBehaviour
     [SerializeField] AnimationClip getUpFromBackDownAnim;
     [SerializeField] AnimationClip getUpFromFaceDownAnim;
     [SerializeField] AnimationClip idleAnim;
+    [SerializeField] float getUpFromBackDownAnimSpeed = 1f;
+    [SerializeField] float getUpFromFaceDownAnimSpeed = 1f;
     
     [Header("Limb Force")]
     [SerializeField] FollowLimb[] limbs;
@@ -96,7 +102,7 @@ public class ActiveRagdoll : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_fullRagdoll) return;
+        if (_dead || _fullRagdoll) return;
         
         foreach (var limb in limbs)
         {
@@ -144,13 +150,16 @@ public class ActiveRagdoll : MonoBehaviour
     public void PermaRagdoll()
     {
         animator.Stop();
+        _dead = true;
         _fullRagdoll = true;
+        
+        StopAllCoroutines();
     }
 
     IEnumerator GetUpAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
+        
         if (physicalHips.velocity.magnitude >= getUpVelocityThreshold || 
             !Physics.Raycast(physicalHips.position, Vector3.down, out RaycastHit hit, getUpGroundDistReq, groundMask))
         {
@@ -163,7 +172,9 @@ public class ActiveRagdoll : MonoBehaviour
         
         bool lyingFaceDown = frontPos.position.y < backPos.position.y;
         AnimationClip getUpAnim = lyingFaceDown ? getUpFromFaceDownAnim : getUpFromBackDownAnim;
-        animator.Play(getUpAnim, 1f).Force()
+        float animSpeed = getUpAnim == getUpFromFaceDownAnim ? getUpFromFaceDownAnimSpeed : getUpFromBackDownAnimSpeed;
+
+        animator.Play(getUpAnim, 1f).Force().SetSpeed(animSpeed)
             .OnComplete(() => animator.Play(walkAnim, 1f));
         
         _fullRagdoll = false;
