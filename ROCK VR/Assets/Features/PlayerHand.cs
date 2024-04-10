@@ -17,32 +17,28 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] float springDamper = 5f;
     [SerializeField] float rotationSpringStrength = 25f;
     [SerializeField] float rotationDamperStrength = 5f;
-
-    [SerializeField] FixedJoint fixedJoint;
+    
+    ConfigurableJoint _grabJoint;
+    
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
+
 
     void OnEnable()
     {
         grabAction.action.performed += Grab;
+        grabAction.action.canceled += Release;
     }
     void OnDisable()
     {
         grabAction.action.performed -= Grab;
+        grabAction.action.canceled -= Release;
     }
 
     void FixedUpdate()
     {
-        ApplySpringForce();
         ApplyRotationSpringForce();
-    }
-
-    void ApplySpringForce()
-    {
-        float force = Vector3.Distance(physicalHand.position, transform.position) * springStrength;
-        Vector3 direction = VectorUtils.Direction(physicalHand.position, transform.position);
-        
-        physicalHand.AddForce((force * direction - physicalHand.velocity * springDamper));
+        ApplySpringForce();
     }
 
     void ApplyRotationSpringForce()
@@ -52,18 +48,18 @@ public class PlayerHand : MonoBehaviour
         
         physicalHand.AddTorque((springTorque + dampTorque), ForceMode.Acceleration);
     }
+    
+    void ApplySpringForce()
+    {
+        float force = Vector3.Distance(physicalHand.position, transform.position) * springStrength;
+        Vector3 direction = VectorUtils.Direction(physicalHand.position, transform.position);
+        
+        physicalHand.AddForce((force * direction - physicalHand.velocity * springDamper));
+    }
 
     void Grab(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-        if (_grabbedRB != null)
-        {
-            fixedJoint.connectedBody = null;
-            _grabbedRB = null;
-            return;
-        }
-
-        Collider[] hits = Physics.OverlapSphere(transform.position, col.radius);
+        Collider[] hits = Physics.OverlapSphere(transform.position, col.radius, grabMask);
         if (hits.Length <= 0) return;
         
         List<Rigidbody> hitBodies = new();
@@ -79,7 +75,38 @@ public class PlayerHand : MonoBehaviour
         if (hitBodies.Count <= 0) return;
         
         _grabbedRB = GeneralUtils.GetClosest(transform.position, hitBodies);
-        fixedJoint.connectedBody = _grabbedRB;
-        fixedJoint.connectedAnchor = _grabbedRB.transform.position;
+
+        _grabbedRB.useGravity = false;
+        _grabbedRB.interpolation = RigidbodyInterpolation.Interpolate;
+
+        _grabJoint = physicalHand.gameObject.AddComponent<ConfigurableJoint>();
+        _grabJoint.autoConfigureConnectedAnchor = false;
+        _grabJoint.connectedBody = _grabbedRB;
+        _grabJoint.connectedAnchor = _grabbedRB.transform.InverseTransformPoint(physicalHand.transform.position);
+        
+        _grabJoint.xMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.yMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.zMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.angularXMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.angularYMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.angularZMotion = ConfigurableJointMotion.Locked;
+        _grabJoint.projectionMode = JointProjectionMode.PositionAndRotation;
+
+        _grabJoint.enableCollision = false;
+        
+        Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), true);
+        
+        Debug.Log("Player Grabbed: " + _grabbedRB.name);
+    }
+
+    void Release(InputAction.CallbackContext context)
+    {
+        if (_grabbedRB == null) return;
+
+        Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
+        
+        _grabbedRB.useGravity = true;
+        Destroy(_grabJoint);
+        _grabbedRB = null;
     }
 }
