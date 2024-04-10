@@ -316,9 +316,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 631
   physicalHand: {fileID: 0}
-  springStrength: 1000
+  springStrength: 3000
   springDamper: 25
-  rotationSpringStrength: 1000
+  rotationSpringStrength: 5000
   rotationDamperStrength: 5
 --- !u!120 &7899995540545107197
 LineRenderer:

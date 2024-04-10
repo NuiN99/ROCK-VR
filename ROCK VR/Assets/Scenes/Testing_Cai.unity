@@ -2327,8 +2327,9 @@ GameObject:
   - component: {fileID: 496826036}
   - component: {fileID: 496826035}
   - component: {fileID: 496826034}
+  - component: {fileID: 496826039}
   m_Layer: 9
-  m_Name: Cube_4
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2342,7 +2343,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496826032}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2448,6 +2449,20 @@ Transform:
   - {fileID: 539480304}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &496826039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496826032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441bfd5d58ec32542b1ce773d7b240c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 496826034}
+  size: 0.02
 --- !u!1 &514900110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6712,7 +6727,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 15
-  m_AngularDrag: 30
+  m_AngularDrag: 42
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
