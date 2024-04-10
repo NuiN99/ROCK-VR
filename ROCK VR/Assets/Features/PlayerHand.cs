@@ -56,7 +56,7 @@ public class PlayerHand : MonoBehaviour
         
         physicalHand.AddForce((force * direction - physicalHand.velocity * springDamper));
     }
-
+    
     void Grab(InputAction.CallbackContext context)
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, col.radius, grabMask);
@@ -76,7 +76,6 @@ public class PlayerHand : MonoBehaviour
         
         _grabbedRB = GeneralUtils.GetClosest(transform.position, hitBodies);
 
-        _grabbedRB.useGravity = false;
         _grabbedRB.interpolation = RigidbodyInterpolation.Interpolate;
 
         _grabJoint = physicalHand.gameObject.AddComponent<ConfigurableJoint>();
@@ -105,7 +104,6 @@ public class PlayerHand : MonoBehaviour
 
         Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
         
-        _grabbedRB.useGravity = true;
         Destroy(_grabJoint);
         _grabbedRB = null;
     }
