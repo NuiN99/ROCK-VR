@@ -49,7 +49,11 @@ public class PlayerHand : MonoBehaviour
 
     void ApplyRotationSpringForce()
     {
-        var springTorque = rotationSpringStrength * (Vector3.Cross(physicalHand.transform.up, transform.up) + Vector3.Cross(physicalHand.transform.forward, transform.forward));
+        Vector3 rotation = 
+            Vector3.Cross(physicalHand.transform.up, transform.up) + 
+            Vector3.Cross(physicalHand.transform.forward, transform.forward) + 
+            Vector3.Cross(physicalHand.transform.right, transform.right);
+        var springTorque = rotationSpringStrength * rotation;
         var dampTorque = rotationDamperStrength * -physicalHand.velocity;
         
         physicalHand.AddTorque((springTorque + dampTorque), ForceMode.Acceleration);
