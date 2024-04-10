@@ -4649,7 +4649,7 @@ GameObject:
   - component: {fileID: 1010353988}
   - component: {fileID: 1010353987}
   m_Layer: 0
-  m_Name: PhysicalHand
+  m_Name: Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
