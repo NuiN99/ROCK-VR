@@ -58,11 +58,11 @@ public class PlayerHand : MonoBehaviour
         
         physicalHand.AddTorque((springTorque + dampTorque), ForceMode.Acceleration);
         
+        // QUATERNION IMPLEMENTATION
+        /*
         Quaternion targetRotation = transform.rotation;
         Quaternion currentRotation = physicalHand.transform.rotation;
-
-        // QUATERNION IMPLEMENTATION
-        /*Quaternion rotationDifference = targetRotation * Quaternion.Inverse(currentRotation);
+        Quaternion rotationDifference = targetRotation * Quaternion.Inverse(currentRotation);
 
         rotationDifference.ToAngleAxis(out float angle, out Vector3 axis);
 
