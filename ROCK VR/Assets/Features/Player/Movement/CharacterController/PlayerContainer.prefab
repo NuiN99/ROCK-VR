@@ -1598,7 +1598,7 @@ MonoBehaviour:
   groundCheckDist: 0.25
   slopeCheckDist: 0.25
   rb: {fileID: 8205871923093682757}
-  rotationTarget: {fileID: 7740928437255978234}
+  rotationTarget: {fileID: 8205871923093682757}
 --- !u!114 &4429374026323190033
 MonoBehaviour:
   m_ObjectHideFlags: 0
