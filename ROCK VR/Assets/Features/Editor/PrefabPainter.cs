@@ -8,14 +8,20 @@ public static class PrefabPainter
     static List<GameObject> placedObjects;
     public static GameObject prefab;
     public static bool randomRotation;
+    public static bool randomScale;
+
+    public static float minScale = 1f;
+    public static float maxScale = 1f;
 
     static GameObject visualizer;
 
     static Quaternion rotation;
+    static float scale;
 
     public static void Enable()
     {
         SetRandomRotation();
+        SetRandomScale();
 
         placedObjects = new List<GameObject>();
         SceneView.duringSceneGui += OnSceneGUI;
@@ -23,7 +29,7 @@ public static class PrefabPainter
 
     public static void Disable()
     {
-        placedObjects.Clear();
+        placedObjects?.Clear();
         Object.DestroyImmediate(visualizer);
         SceneView.duringSceneGui -= OnSceneGUI;
     }
@@ -41,6 +47,7 @@ public static class PrefabPainter
         }
         
         visualizer = Object.Instantiate(prefab, hit.point, rotation);
+        visualizer.transform.localScale *= scale;
         
         if (Event.current.type == EventType.MouseDown && Event.current.button == 0)
         {
@@ -53,8 +60,10 @@ public static class PrefabPainter
             GameObject obj = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
             if (obj == null) return;
             obj.transform.SetPositionAndRotation(hit.point, rotation);
+            obj.transform.localScale *= scale;
             placedObjects.Add(obj);
             
+            SetRandomScale();
             SetRandomRotation();
             Selection.activeObject = obj;
         }
@@ -63,6 +72,11 @@ public static class PrefabPainter
     static void SetRandomRotation()
     {
         rotation = randomRotation ? Quaternion.Euler(0, Random.Range(0, 360), 0) : Quaternion.identity;
+    }
+
+    static void SetRandomScale()
+    {
+        scale = randomScale ? Random.Range(minScale, maxScale) : 1;
     }
     
     public static void UndoLastAction()
@@ -96,6 +110,14 @@ public class PrefabPainterWindow : EditorWindow
 
         PrefabPainter.prefab = (GameObject)EditorGUILayout.ObjectField("Prefab to Place", PrefabPainter.prefab, typeof(GameObject), false);
         PrefabPainter.randomRotation = EditorGUILayout.Toggle("Random Rotation", PrefabPainter.randomRotation);
+        PrefabPainter.randomScale = EditorGUILayout.Toggle("Random Scale", PrefabPainter.randomScale);
+        
+        if (PrefabPainter.randomScale)
+        {
+            Vector2 minMax = new(PrefabPainter.minScale, PrefabPainter.maxScale);
+            EditorGUILayout.Vector2Field("Value", minMax);
+            EditorGUILayout.MinMaxSlider("Scale", ref PrefabPainter.minScale, ref PrefabPainter.maxScale, 0.1f, 10f);
+        }
 
         if (GUILayout.Button("Undo Last Placement"))
         {
