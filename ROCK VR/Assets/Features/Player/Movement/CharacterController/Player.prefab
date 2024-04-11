@@ -102,7 +102,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.01
-  far clip plane: 1000
+  far clip plane: 1500
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -316,10 +316,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 631
   physicalHand: {fileID: 0}
-  springStrength: 3000
-  springDamper: 25
-  rotationSpringStrength: 5000
-  rotationDamperStrength: 5
+  otherHand: {fileID: 0}
+  ignoreGrabbedObject: []
+  animator: {fileID: 0}
+  openedAnim: {fileID: 0}
+  closedAnim: {fileID: 0}
+  openFadeTime: 0.1
+  closeFadeTime: 0.1
 --- !u!120 &7899995540545107197
 LineRenderer:
   serializedVersion: 2
@@ -1434,10 +1437,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 631
   physicalHand: {fileID: 0}
-  springStrength: 3000
-  springDamper: 25
-  rotationSpringStrength: 5000
-  rotationDamperStrength: 5
+  otherHand: {fileID: 0}
+  ignoreGrabbedObject: []
+  animator: {fileID: 0}
+  openedAnim: {fileID: 0}
+  closedAnim: {fileID: 0}
+  openFadeTime: 0.1
+  closeFadeTime: 0.1
 --- !u!120 &2857234021596962451
 LineRenderer:
   serializedVersion: 2
