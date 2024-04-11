@@ -20,7 +20,7 @@ MonoBehaviour:
   useFixedVolumes: 0
   possibleVolumes: []
   minPitch: 0.7
-  maxPitch: 1.2
+  maxPitch: 0.9
   useFixedPitches: 0
   possiblePitches: []
   stereoPan: 0

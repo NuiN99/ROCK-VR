@@ -1,6 +1,7 @@
 using NuiN.ScriptableHarmony.Sound;
 using System.Collections;
 using System.Collections.Generic;
+using NuiN.NExtensions;
 using UnityEngine;
 
 public class Caveman : MonoBehaviour, IDamageable
@@ -9,10 +10,15 @@ public class Caveman : MonoBehaviour, IDamageable
     [SerializeField] SoundSO injure;
     [SerializeField] SoundSO dead;
     [SerializeField] Transform head;
+
+    [SerializeField] SimpleTimer damageSoundInterval; 
+    
     void IDamageable.Damaged(float amount, Vector3 direction)
     {
-        injure.PlaySpatial(head.position);
-        
+        if (damageSoundInterval.Complete())
+        {
+            injure.PlaySpatial(head.position);
+        }
     }
 
     void IDamageable.Died()

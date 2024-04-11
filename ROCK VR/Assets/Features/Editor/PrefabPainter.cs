@@ -49,8 +49,10 @@ public static class PrefabPainter
                 Debug.LogWarning("Please select a prefab");
                 return;
             }
-            
-            GameObject obj = Object.Instantiate(prefab, hit.point, rotation);
+
+            GameObject obj = PrefabUtility.InstantiatePrefab(prefab) as GameObject;
+            if (obj == null) return;
+            obj.transform.SetPositionAndRotation(hit.point, rotation);
             placedObjects.Add(obj);
             
             SetRandomRotation();

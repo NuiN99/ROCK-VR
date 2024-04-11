@@ -19,8 +19,8 @@ MonoBehaviour:
   maxVolume: 0.6
   useFixedVolumes: 0
   possibleVolumes: []
-  minPitch: 0.75
-  maxPitch: 1.2
+  minPitch: 0.7
+  maxPitch: 0.9
   useFixedPitches: 0
   possiblePitches: []
   stereoPan: 0
