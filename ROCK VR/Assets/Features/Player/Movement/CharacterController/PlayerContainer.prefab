@@ -1565,6 +1565,7 @@ MonoBehaviour:
   rb: {fileID: 8205871923093682757}
   useMouseAndKeyboard: 0
   ropeVisual: {fileID: 2509926323490809662}
+  realHandPos: {fileID: 8357389071745849714}
 --- !u!114 &514829110530137695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,7 +1877,7 @@ LineRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 1
-    textureScale: {x: 1, y: 1.49}
+    textureScale: {x: 1, y: 1.25}
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0

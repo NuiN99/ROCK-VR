@@ -38,6 +38,8 @@ public class PlayerSwingingXR : MonoBehaviour
     [SerializeField] bool useMouseAndKeyboard;
 
     [SerializeField] RopeVisual ropeVisual;
+
+    [SerializeField] Transform realHandPos;
     
     void Awake()
     {
@@ -66,7 +68,7 @@ public class PlayerSwingingXR : MonoBehaviour
         else
         {
             joint.anchor = root.localPosition;
-            ropeVisual.SetPositions(root.position, _connectionPoint.position);
+            ropeVisual.SetPositions(realHandPos.position, _connectionPoint.position);
         }
     }
 
@@ -105,8 +107,8 @@ public class PlayerSwingingXR : MonoBehaviour
     {
         if (!_attached)
         {
-            indicatorLineRenderer.SetPosition(0, root.position);
-            indicatorLineRenderer.SetPosition(1, root.position + root.forward * maxAttachDistance);
+            indicatorLineRenderer.SetPosition(0, realHandPos.position);
+            indicatorLineRenderer.SetPosition(1, realHandPos.position + realHandPos.forward * maxAttachDistance);
         }
     }
 
