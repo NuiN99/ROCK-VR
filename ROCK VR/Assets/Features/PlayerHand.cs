@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Animancer;
 using NuiN.NExtensions;
 using UnityEngine;
@@ -11,9 +12,11 @@ public class PlayerHand : MonoBehaviour
 
     [SerializeField] LayerMask grabMask;
     
-    [Header("Physical Properties")]
+    [Header("References")]
     [SerializeField] Rigidbody physicalHand;
-
+    [SerializeField] PlayerHand otherHand;
+    [SerializeField] Collider[] ignoreGrabbedObject;
+    
     [Header("Animation")] 
     [SerializeField] AnimancerComponent animator;
     [SerializeField] AnimationClip openedAnim;
@@ -21,12 +24,10 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] float openFadeTime = 0.1f;
     [SerializeField] float closeFadeTime = 0.1f;
 
-    int _grabbedObjLayer;
     ConfigurableJoint _grabJoint;
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
-
-    [SerializeField] Collider[] ignoreGrabbedObject;
+    bool _addedRB;
     
     void OnEnable()
     {
@@ -46,21 +47,28 @@ public class PlayerHand : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, col.radius, grabMask);
         if (hits.Length <= 0) return;
         
-        List<Rigidbody> hitBodies = new();
-        foreach (var hit in hits)
+        Collider closest = GeneralUtils.GetClosest(transform.position, hits.ToList());
+
+        _addedRB = false;
+        
+        if (!closest.TryGetComponent(out _grabbedRB))
         {
-            if (hit.TryGetComponent(out Rigidbody rb))
+            if (closest.GetComponentInParent<Rigidbody>())
             {
-                if (rb == physicalHand) continue;
-                hitBodies.Add(rb);
+                _grabbedRB = closest.GetComponentInParent<Rigidbody>();
+            }
+            else
+            {
+                _grabbedRB = closest.gameObject.AddComponent<Rigidbody>();
+                _addedRB = true;
+                _grabbedRB.isKinematic = true;
+                _grabbedRB.useGravity = false;
             }
         }
-        
-        if (hitBodies.Count <= 0) return;
-        
-        _grabbedRB = GeneralUtils.GetClosest(transform.position, hitBodies);
-
-        _grabbedRB.interpolation = RigidbodyInterpolation.Interpolate;
+        else
+        {
+            _grabbedRB.interpolation = RigidbodyInterpolation.Interpolate;
+        }
 
         _grabJoint = physicalHand.gameObject.AddComponent<ConfigurableJoint>();
         _grabJoint.autoConfigureConnectedAnchor = false;
@@ -77,8 +85,6 @@ public class PlayerHand : MonoBehaviour
 
         _grabJoint.enableCollision = false;
 
-        _grabbedObjLayer = _grabbedRB.gameObject.layer;
-        
         IgnoreCollisions(true);
 
         Debug.Log("Player Grabbed: " + _grabbedRB.name);
@@ -89,9 +95,14 @@ public class PlayerHand : MonoBehaviour
         animator.Play(openedAnim, openFadeTime).Force();
         
         if (_grabbedRB == null) return;
-
+        
         IgnoreCollisions(false);
-        _grabbedObjLayer = 0;
+
+        if (_addedRB && otherHand._grabbedRB != _grabbedRB)
+        {
+            _addedRB = false;
+            Destroy(_grabbedRB);
+        }
         
         Destroy(_grabJoint);
         _grabbedRB = null;

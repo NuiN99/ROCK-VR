@@ -371,15 +371,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 887
   physicalHand: {fileID: 4147537606694787558}
+  otherHand: {fileID: 3485082018018267479}
+  ignoreGrabbedObject:
+  - {fileID: 1017277417465676823}
+  - {fileID: 8746704925418969812}
+  - {fileID: 8612840813383974617}
   animator: {fileID: 1833724821552859510}
   openedAnim: {fileID: 7400000, guid: 7ef9df2027fc64f41b3d227ec09318ff, type: 2}
   closedAnim: {fileID: 7400000, guid: a6f8b91b7ae6a96409fe70e9728b355e, type: 2}
   openFadeTime: 0.1
   closeFadeTime: 0.1
-  ignoreGrabbedObject:
-  - {fileID: 1017277417465676823}
-  - {fileID: 8746704925418969812}
-  - {fileID: 8612840813383974617}
 --- !u!120 &1402671033026414486
 LineRenderer:
   serializedVersion: 2
@@ -848,7 +849,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4881562305971896928
 GameObject:
@@ -1154,15 +1155,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 887
   physicalHand: {fileID: 5299250162823713001}
+  otherHand: {fileID: 2492267858460826368}
+  ignoreGrabbedObject:
+  - {fileID: 4555482111614158852}
+  - {fileID: 8746704925418969812}
+  - {fileID: 8612840813383974617}
   animator: {fileID: 5543333956662495883}
   openedAnim: {fileID: 7400000, guid: 7ef9df2027fc64f41b3d227ec09318ff, type: 2}
   closedAnim: {fileID: 7400000, guid: a6f8b91b7ae6a96409fe70e9728b355e, type: 2}
   openFadeTime: 0.1
   closeFadeTime: 0.1
-  ignoreGrabbedObject:
-  - {fileID: 4555482111614158852}
-  - {fileID: 8746704925418969812}
-  - {fileID: 8612840813383974617}
 --- !u!120 &5968559318900656863
 LineRenderer:
   serializedVersion: 2
@@ -1631,7 +1633,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6760510103074966392
 GameObject:
@@ -1768,7 +1770,7 @@ MonoBehaviour:
   jumpDelay:
     duration: 0.15
     startCompleted: 1
-  jumpHeight: 12
+  jumpHeight: 15
   maxAirJumps: 0
   downForceMult: 0.2
   downForceStartUpVelocity: 3
