@@ -1473,6 +1473,7 @@ GameObject:
   - component: {fileID: 2935433080206933425}
   - component: {fileID: 9165977817276298754}
   - component: {fileID: 2822060989024313189}
+  - component: {fileID: 6125101588607484950}
   m_Layer: 3
   m_Name: XROrigin
   m_TagString: Player
@@ -1649,7 +1650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lr: {fileID: 2935433080206933425}
   resolution: 10
-  draw: 0
 --- !u!54 &8205871923093682757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1914,6 +1914,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &6125101588607484950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760510103074966392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8530240533ea5489e0b4683eed02f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position:
+    variable: {fileID: 11400000, guid: a2848b3ec395d724fb3db7328f39cc2f, type: 2}
 --- !u!1 &7355107270971261306
 GameObject:
   m_ObjectHideFlags: 0

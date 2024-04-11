@@ -58,7 +58,6 @@ public class PlayerSwingingXR : MonoBehaviour
         if (activateAction.action.WasPressedThisFrame()) Activate();
         else if(activateAction.action.WasReleasedThisFrame()) Detach();
 
-        Debug.Log(_attached);
         if (!_attached)
         {
             joint.connectedAnchor = transform.position;
