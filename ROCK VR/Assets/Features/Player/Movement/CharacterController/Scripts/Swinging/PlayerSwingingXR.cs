@@ -31,12 +31,13 @@ public class PlayerSwingingXR : MonoBehaviour
     [SerializeField] ConfigurableJoint joint;
 
     [SerializeField] LineRenderer indicatorLineRenderer;
-    [SerializeField] LineRenderer ropeLineRenderer;
 
     [SerializeField] float pullForce = 5f;
     [SerializeField] Rigidbody rb;
 
     [SerializeField] bool useMouseAndKeyboard;
+
+    [SerializeField] RopeVisual ropeVisual;
     
     void Awake()
     {
@@ -46,9 +47,7 @@ public class PlayerSwingingXR : MonoBehaviour
 
     void Start()
     {
-        indicatorLineRenderer.positionCount = 2;
-        ropeLineRenderer.positionCount = 2;
-        ropeLineRenderer.enabled = false;
+        ropeVisual.draw = false;
         
         _defaultConnectionPoint.isKinematic = true;
         _defaultConnectionPoint.detectCollisions = false;
@@ -59,13 +58,16 @@ public class PlayerSwingingXR : MonoBehaviour
         if (activateAction.action.WasPressedThisFrame()) Activate();
         else if(activateAction.action.WasReleasedThisFrame()) Detach();
 
+        Debug.Log(_attached);
         if (!_attached)
         {
-            joint.connectedAnchor = root.position;
+            joint.connectedAnchor = transform.position;
+            joint.anchor = Vector3.zero;
         }
         else
         {
             joint.anchor = root.localPosition;
+            ropeVisual.SetPositions(root.position, _connectionPoint.position);
         }
     }
 
@@ -107,11 +109,6 @@ public class PlayerSwingingXR : MonoBehaviour
             indicatorLineRenderer.SetPosition(0, root.position);
             indicatorLineRenderer.SetPosition(1, root.position + root.forward * maxAttachDistance);
         }
-        else
-        {
-            ropeLineRenderer.SetPosition(0, root.position);
-            ropeLineRenderer.SetPosition(1, _connectionPoint.position);
-        }
     }
 
     void Activate()
@@ -138,10 +135,15 @@ public class PlayerSwingingXR : MonoBehaviour
         }
 
         _localHandPosLastFrame = root.localPosition;
+
+        float distance = Vector3.Distance(transform.position, hit.point);
+        SetJointLimit(distance);
+
+        ropeVisual.draw = true;
+        ropeVisual.SetDistance(distance);
+        ropeVisual.SetPositions(root.position, hit.point);
         
-        SetJointLimit(Vector3.Distance(transform.position, hit.point));
         
-        ropeLineRenderer.enabled = true;
         indicatorLineRenderer.enabled = false;
         
         _attached = true;
@@ -163,7 +165,7 @@ public class PlayerSwingingXR : MonoBehaviour
         
         joint.connectedBody = null;
 
-        ropeLineRenderer.enabled = false;
+        ropeVisual.draw = false;
         indicatorLineRenderer.enabled = true;
 
         _attached = false;

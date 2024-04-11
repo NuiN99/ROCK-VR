@@ -39,8 +39,12 @@ public class CavemanBrain : MonoBehaviour
     {
         SnapToGround();
         body.position = Vector3.MoveTowards(body.position, _lastSeenPos, moveSpeed * Time.deltaTime);
-        Quaternion lookRotation = Quaternion.LookRotation(VectorUtils.Direction(body.position, _lastSeenPos));
-        body.rotation = Quaternion.RotateTowards(body.rotation, lookRotation, rotateSpeed * Time.deltaTime);
+        Vector3 direction = VectorUtils.Direction(body.position, _lastSeenPos);
+        if (direction != Vector3.zero)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            body.rotation = Quaternion.RotateTowards(body.rotation, lookRotation, rotateSpeed * Time.deltaTime);
+        }
         
         if (!detectionInterval.Complete()) return;
 

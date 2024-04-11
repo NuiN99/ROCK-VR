@@ -11,7 +11,9 @@ public class Caveman : MonoBehaviour, IDamageable
     [SerializeField] SoundSO dead;
     [SerializeField] Transform head;
 
-    [SerializeField] SimpleTimer damageSoundInterval; 
+    [SerializeField] SimpleTimer damageSoundInterval;
+
+    [SerializeField] GameObject eyelids;
     
     void IDamageable.Damaged(float amount, Vector3 direction)
     {
@@ -23,6 +25,7 @@ public class Caveman : MonoBehaviour, IDamageable
 
     void IDamageable.Died()
     {
+        eyelids.SetActive(true);
         dead.PlaySpatial(head.position);
         ragdoll.PermaRagdoll();
     }

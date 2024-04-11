@@ -1467,6 +1467,7 @@ GameObject:
   - component: {fileID: 514829110530137695}
   - component: {fileID: 4429374026323190033}
   - component: {fileID: 2813981762069309464}
+  - component: {fileID: 2509926323490809662}
   - component: {fileID: 8205871923093682757}
   - component: {fileID: 4162739496920411111}
   - component: {fileID: 2935433080206933425}
@@ -1559,10 +1560,10 @@ MonoBehaviour:
     m_Bits: 631
   joint: {fileID: 4162739496920411111}
   indicatorLineRenderer: {fileID: 1402671033026414486}
-  ropeLineRenderer: {fileID: 2935433080206933425}
   pullForce: 300
   rb: {fileID: 8205871923093682757}
   useMouseAndKeyboard: 0
+  ropeVisual: {fileID: 2509926323490809662}
 --- !u!114 &514829110530137695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,7 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disableGroundDrag: 0
   feet: {fileID: 6855482719297791994}
-  moveSpeed: 0.375
+  moveSpeed: 0.175
   runSpeedMult: 1.5
   maxAirVelocityMagnitude: 6.2
   groundSpeedMult: 5
@@ -1634,6 +1635,21 @@ MonoBehaviour:
   jumpKey: 32
   lookSensitivity: 5
   yRotationLimit: 88
+--- !u!114 &2509926323490809662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760510103074966392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fedaba03eae494ea20acc3b20ab188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lr: {fileID: 2935433080206933425}
+  resolution: 10
+  draw: 0
 --- !u!54 &8205871923093682757
 Rigidbody:
   m_ObjectHideFlags: 0

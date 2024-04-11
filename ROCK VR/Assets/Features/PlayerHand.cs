@@ -85,9 +85,10 @@ public class PlayerHand : MonoBehaviour
 
         _grabJoint.enableCollision = false;
 
-        IgnoreCollisions(true);
-
-        Debug.Log("Player Grabbed: " + _grabbedRB.name);
+        if (!_addedRB)
+        {
+            IgnoreCollisions(true);
+        }
     }
 
     void Release(InputAction.CallbackContext context)

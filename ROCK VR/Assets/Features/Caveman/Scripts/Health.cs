@@ -31,6 +31,6 @@ public class Health : MonoBehaviour, IHealth
             Dead = true;
             Debug.Log($"<color=green>{gameObject.name}</color> | <color=black>Died</color>", gameObject);
         } 
-        //else Debug.Log($"<color=green>{gameObject.name}</color> | <color=red>{currenthealth}</color> Health", gameObject);
+        else Debug.Log($"<color=green>{gameObject.name}</color> | <color=red>{currenthealth}</color> Health", gameObject);
     }
 }
