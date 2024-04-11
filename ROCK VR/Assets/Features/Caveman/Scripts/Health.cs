@@ -15,6 +15,7 @@ public class Health : MonoBehaviour, IHealth
     void Start()
     {
         currenthealth = maxHealth;
+
     }
 
     public void TakeDamage(float damage, Vector3 direction)

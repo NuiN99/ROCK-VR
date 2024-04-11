@@ -223,6 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ragdoll: {fileID: 5753329480979763755}
+  injure: {fileID: 11400000, guid: 20fb43a3430c5764b9416d83f64a0508, type: 2}
+  dead: {fileID: 11400000, guid: 64a40bfc91499444fba31e718194f9a4, type: 2}
+  head: {fileID: 2433041583678126919}
+  damageSoundInterval:
+    duration: 0.5
+    startCompleted: 1
 --- !u!114 &1786770521182418742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,6 +1325,12 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!4 &2433041583678126919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 45df29892a310d34e87a9c065fd3fd19,
+    type: 3}
+  m_PrefabInstance: {fileID: 8081091501013798447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2670365369257179812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: 45df29892a310d34e87a9c065fd3fd19,

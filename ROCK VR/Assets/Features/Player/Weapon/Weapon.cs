@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using NuiN.NExtensions;
+using NuiN.ScriptableHarmony.Sound;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] float weaponDamage = 50;
+    [SerializeField] SoundSO hitSounds;
     Vector3 _lastPosition;
     Vector3 _currentPosition;
 
@@ -22,6 +24,7 @@ public class Weapon : MonoBehaviour
             float impactSpeed = GetImpactSpeed(_lastPosition, _currentPosition);
             Debug.Log("Impact Speed: " + impactSpeed);
             health.TakeDamage(weaponDamage * impactSpeed, VectorUtils.Direction(_lastPosition, _currentPosition));
+            hitSounds.Play();
         }
     }
 

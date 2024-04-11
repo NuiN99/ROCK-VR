@@ -5,6 +5,8 @@ namespace NuiN.Movement
 {
     public class GroundMovement : MonoBehaviour, IMovement
     {
+        public bool Grounded => _grounded;
+
         int _curAirJumps;
         bool _grounded;
 
