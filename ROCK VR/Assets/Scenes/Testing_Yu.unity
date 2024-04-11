@@ -4774,6 +4774,8 @@ MonoBehaviour:
   weaponSource: {fileID: 0}
   footstepSource: {fileID: 0}
   xrController: {fileID: 0}
+  rb: {fileID: 1063722549}
+  movement: {fileID: 1063722548}
 --- !u!1001 &1017495778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5084,6 +5086,24 @@ MonoBehaviour:
 --- !u!4 &1063722547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5453803518092506982, guid: 99f3432cd64d2f9458d627de87621b4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063722545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063722548 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1457268842194174316, guid: 99f3432cd64d2f9458d627de87621b4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1063722545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc1a587d6f1f8d4196c759ca3ee38fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1063722549 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8451574136197073100, guid: 99f3432cd64d2f9458d627de87621b4b,
     type: 3}
   m_PrefabInstance: {fileID: 1063722545}
   m_PrefabAsset: {fileID: 0}

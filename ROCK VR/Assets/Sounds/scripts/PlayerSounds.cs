@@ -1,3 +1,4 @@
+using NuiN.Movement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PlayerSounds : MonoBehaviour
 {
     [Header("Weapon")]
-    public AudioClip[] whipSounds;
+    [SerializeField] AudioClip[] whipSounds;
 
     [Header("Footsteps")]
     public List<AudioClip> footsteps;
@@ -16,6 +17,12 @@ public class PlayerSounds : MonoBehaviour
     public AudioSource footstepSource;
 
     public XRController xrController;
+
+    [SerializeField] Rigidbody rb;
+    [SerializeField] GroundMovement movement;
+
+    private bool isMoving = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,28 +33,32 @@ public class PlayerSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isMoving = movement.Grounded && rb.velocity.magnitude > 0.1f;
+
         //Vector2 primary2DAxisValue;
         //Input.GetKeyDown("w")|| Input.GetKeyDown("s")|| Input.GetKeyDown("a")|| Input.GetKeyDown("d")
-        //if ((xrController.inputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out primary2DAxisValue);
-        //{
-        //    if(primary2DAxisValue.magnitude > 0.1f)
-        //    {
-        //        PlayFootstep();
-        //    }
-        //    else
-        //    {
-        //        StopFootstep();
-        //    }
-            
-        //}
+       
+        if(isMoving)
+        {
+            StartCoroutine(PlayFootstep());
+        }
+        else
+        {
+            StopFootstep();
+        }
+          
+       
     }
 
-    void PlayFootstep()
+    IEnumerator PlayFootstep()
     {
+        if (!footstepSource.isPlaying)
+        {
+            footstepSource.clip = footsteps[Random.Range(0, footsteps.Count)];
+            footstepSource.Play();
 
-        footstepSource.clip = footsteps[Random.Range(0, footsteps.Count)];
-        footstepSource.Play();
-
+            yield return new WaitForSeconds(0.5f);
+        }
     }
     void StopFootstep()
     {
