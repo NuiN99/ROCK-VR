@@ -223,6 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ragdoll: {fileID: 5753329480979763755}
+  injure: {fileID: 11400000, guid: 20fb43a3430c5764b9416d83f64a0508, type: 2}
+  dead: {fileID: 11400000, guid: 64a40bfc91499444fba31e718194f9a4, type: 2}
+  head: {fileID: 0}
 --- !u!114 &1786770521182418742
 MonoBehaviour:
   m_ObjectHideFlags: 0
