@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDamage: 50
+  hitSounds: {fileID: 11400000, guid: c52aab03eff60ea49a13ec0628eaabb8, type: 2}
 --- !u!135 &225053600
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3112,6 +3113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDamage: 10
+  hitSounds: {fileID: 11400000, guid: c52aab03eff60ea49a13ec0628eaabb8, type: 2}
 --- !u!1 &631251261
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,6 +9486,263 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1950341527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950341528}
+  m_Layer: 6
+  m_Name: mixamorig:Hips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950341528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950341527}
+  serializedVersion: 2
+  m_LocalRotation: {x: -2.8172079e-10, y: 0.00000009465209, z: -0.0000027252056, w: 1}
+  m_LocalPosition: {x: 0.00000087859485, y: 0.9479614, z: -0.0062724254}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 960550656}
+  - {fileID: 1870025041}
+  - {fileID: 1970298766}
+  m_Father: {fileID: 1375713093}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1955075018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955075019}
+  m_Layer: 6
+  m_Name: mixamorig:RightArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1955075019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955075018}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.021369267, y: -0.01763574, z: 0.00038016902, w: 0.9996161}
+  m_LocalPosition: {x: 2.4513115e-11, y: 0.22441328, z: 0.0000000014608053}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1139624813}
+  m_Father: {fileID: 547449541}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1959598877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959598882}
+  - component: {fileID: 1959598881}
+  - component: {fileID: 1959598880}
+  - component: {fileID: 1959598879}
+  - component: {fileID: 1959598878}
+  m_Layer: 6
+  m_Name: Caveman_ActiveRagdoll(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1959598878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959598877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728d33158601a4049a26c2ed61679b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageable:
+    mode: 0
+    unityReference: {fileID: 1959598879}
+    rawReference:
+      rid: -2
+  currenthealth: 20
+  maxHealth: 20
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!114 &1959598879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959598877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8f6ab19bb3ec14593bd27a514ccdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragdoll: {fileID: 1959598881}
+  injure: {fileID: 0}
+  dead: {fileID: 0}
+  head: {fileID: 0}
+--- !u!114 &1959598880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959598877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 1375713092}
+  _ActionOnDisable: 0
+--- !u!114 &1959598881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959598877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450167309fc5fe849b89e9c4cff417f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalMass: 4.355331
+  massIncrement: 0.05
+  globalMoveForce: 0.7
+  globalRotateForce: 25
+  damping: 0.75
+  maxOffBalanceDist: 0.5
+  getUpAfterRagdolledDelay: 3
+  animatedRigRoot: {fileID: 1375713093}
+  getUpGroundDistReq: 1
+  getUpVelocityThreshold: 1
+  physicalHips: {fileID: 1574128834}
+  animatedHips: {fileID: 1950341528}
+  frontPos: {fileID: 1439722262}
+  backPos: {fileID: 1466966103}
+  groundCheckDist: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 55
+  leftFootPhysical: {fileID: 268513360}
+  rightFootPhysical: {fileID: 144209646}
+  animator: {fileID: 1959598880}
+  walkAnim: {fileID: 7400000, guid: 5ddf4c4946d88454cbc14d2680f5a160, type: 2}
+  getUpFromBackDownAnim: {fileID: 7400000, guid: cfe342bceab425b449311f2764eff2a0,
+    type: 2}
+  getUpFromFaceDownAnim: {fileID: 7400000, guid: a7051389af4c6c34ab40c5b3fcfe653a,
+    type: 2}
+  idleAnim: {fileID: 7400000, guid: f1a338a16e96a18488e3f0e43b5a729d, type: 2}
+  getUpFromBackDownAnimSpeed: 0.75
+  getUpFromFaceDownAnimSpeed: 1
+  limbs:
+  - <RB>k__BackingField: {fileID: 1349638335}
+    <Target>k__BackingField: {fileID: 1864923177}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 1574128834}
+    <Target>k__BackingField: {fileID: 1950341528}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 1355863286}
+    <Target>k__BackingField: {fileID: 55373487}
+    <MoveForce>k__BackingField: 0.3
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 1639018664}
+    <Target>k__BackingField: {fileID: 1767109426}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 1138762414}
+    <Target>k__BackingField: {fileID: 1232854435}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 54593800}
+    <Target>k__BackingField: {fileID: 1955075019}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 565278890}
+    <Target>k__BackingField: {fileID: 1139624813}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 2103814038}
+    <Target>k__BackingField: {fileID: 320797560}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 192052861}
+    <Target>k__BackingField: {fileID: 960550656}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 1119355748}
+    <Target>k__BackingField: {fileID: 1839770461}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+  - <RB>k__BackingField: {fileID: 543709404}
+    <Target>k__BackingField: {fileID: 1870025041}
+    <MoveForce>k__BackingField: 1
+    <RotateForce>k__BackingField: 1
+    rotateAdjustFactor: 0.5
+--- !u!4 &1959598882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959598877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.6946135, y: 0.7943444, z: -8.182867}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3406058}
+  - {fileID: 1375713093}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1962178872
 GameObject:
   m_ObjectHideFlags: 0

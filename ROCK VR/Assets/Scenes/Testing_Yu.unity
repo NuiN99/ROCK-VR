@@ -4773,6 +4773,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 751b1db1e7a310548b0373ad410d8981, type: 3}
   weaponSource: {fileID: 0}
   footstepSource: {fileID: 0}
+  xrController: {fileID: 0}
 --- !u!1001 &1017495778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7962,6 +7963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDamage: 50
+  hitSounds: {fileID: 11400000, guid: c52aab03eff60ea49a13ec0628eaabb8, type: 2}
 --- !u!135 &1794515892
 SphereCollider:
   m_ObjectHideFlags: 0
