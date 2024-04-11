@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3774514424013554314}
   - component: {fileID: 6673002186782330335}
   - component: {fileID: 8821907525790434610}
+  - component: {fileID: 591133054485220557}
   m_Layer: 0
   m_Name: leaves4
   m_TagString: Untagged
@@ -83,6 +84,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &591133054485220557
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171580811881500155}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6952734021981271727, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &4909367186177509806
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +117,7 @@ GameObject:
   - component: {fileID: 1861062303781870952}
   - component: {fileID: 6429871685726212107}
   - component: {fileID: 3804263532585213162}
+  - component: {fileID: 6254733112513577180}
   m_Layer: 0
   m_Name: Branch1
   m_TagString: Untagged
@@ -166,6 +190,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6254733112513577180
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909367186177509806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7008836731269642067, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &6214544404820915626
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +223,7 @@ GameObject:
   - component: {fileID: 2964080890349484731}
   - component: {fileID: 3400212223431990250}
   - component: {fileID: 4016006951007065445}
+  - component: {fileID: 6537406509567870247}
   m_Layer: 0
   m_Name: Leaves3
   m_TagString: Untagged
@@ -249,6 +296,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6537406509567870247
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6214544404820915626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1122067009543636046, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &6657501322817325985
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +329,7 @@ GameObject:
   - component: {fileID: 4654304762891643368}
   - component: {fileID: 5266968655154984919}
   - component: {fileID: 7962838751710774390}
+  - component: {fileID: 4847846681984189409}
   m_Layer: 0
   m_Name: Leaves2
   m_TagString: Untagged
@@ -332,6 +402,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4847846681984189409
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657501322817325985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4794890698741042622, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &6886129168145451673
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +473,7 @@ GameObject:
   - component: {fileID: 6459501051562690473}
   - component: {fileID: 1775021439631501692}
   - component: {fileID: 3937433192049761938}
+  - component: {fileID: 2648175365381112175}
   m_Layer: 0
   m_Name: Branch2
   m_TagString: Untagged
@@ -453,6 +546,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2648175365381112175
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637732238782424573}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4545203199711406822, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &8802677749246439529
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +579,7 @@ GameObject:
   - component: {fileID: 3124061365241043214}
   - component: {fileID: 5334669796848696890}
   - component: {fileID: 515509225537184683}
+  - component: {fileID: 1837047028724406591}
   m_Layer: 0
   m_Name: Trunk1
   m_TagString: Untagged
@@ -536,6 +652,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1837047028724406591
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802677749246439529}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5974428096172402610, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
 --- !u!1 &8897479748323200874
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +685,7 @@ GameObject:
   - component: {fileID: 2426026476197589328}
   - component: {fileID: 5996106933168051311}
   - component: {fileID: 6678917634427788100}
+  - component: {fileID: 7511974521277640957}
   m_Layer: 0
   m_Name: Leaves1
   m_TagString: Untagged
@@ -619,3 +758,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7511974521277640957
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8897479748323200874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3319661220905074513, guid: db4b53d708a9c85448dde2dedf8d55b0, type: 3}
