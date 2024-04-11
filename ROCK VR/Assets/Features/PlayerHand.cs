@@ -13,10 +13,6 @@ public class PlayerHand : MonoBehaviour
     
     [Header("Physical Properties")]
     [SerializeField] Rigidbody physicalHand;
-    [SerializeField] float springStrength = 25f;
-    [SerializeField] float springDamper = 5f;
-    [SerializeField] float rotationSpringStrength = 25f;
-    [SerializeField] float rotationDamperStrength = 5f;
 
     [Header("Animation")] 
     [SerializeField] AnimancerComponent animator;
@@ -25,11 +21,13 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] float openFadeTime = 0.1f;
     [SerializeField] float closeFadeTime = 0.1f;
 
+    int _grabbedObjLayer;
     ConfigurableJoint _grabJoint;
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
 
-
+    [SerializeField] Collider[] ignoreGrabbedObject;
+    
     void OnEnable()
     {
         grabAction.action.performed += Grab;
@@ -39,51 +37,6 @@ public class PlayerHand : MonoBehaviour
     {
         grabAction.action.performed -= Grab;
         grabAction.action.canceled -= Release;
-    }
-
-    void FixedUpdate()
-    {
-        ApplyRotationSpringForce();
-        ApplySpringForce();
-    }
-
-    void ApplyRotationSpringForce()
-    {
-        Vector3 rotation = 
-            Vector3.Cross(physicalHand.transform.up, transform.up) + 
-            Vector3.Cross(physicalHand.transform.forward, transform.forward) + 
-            Vector3.Cross(physicalHand.transform.right, transform.right);
-        var springTorque = rotationSpringStrength * rotation;
-        var dampTorque = rotationDamperStrength * -physicalHand.angularVelocity;
-        
-        physicalHand.AddTorque((springTorque + dampTorque), ForceMode.Acceleration);
-        
-        // QUATERNION IMPLEMENTATION
-        /*
-        Quaternion targetRotation = transform.rotation;
-        Quaternion currentRotation = physicalHand.transform.rotation;
-        Quaternion rotationDifference = targetRotation * Quaternion.Inverse(currentRotation);
-
-        rotationDifference.ToAngleAxis(out float angle, out Vector3 axis);
-
-        if (angle > 180)
-            angle -= 360;
-
-        angle *= Mathf.Deg2Rad;
-
-        Vector3 springTorque = angle * axis.normalized * rotationSpringStrength;
-
-        Vector3 dampTorque = -rotationDamperStrength * physicalHand.angularVelocity;
-
-        physicalHand.AddTorque(springTorque + dampTorque, ForceMode.Acceleration);*/
-    }
-    
-    void ApplySpringForce()
-    {
-        float force = Vector3.Distance(physicalHand.position, transform.position) * springStrength;
-        Vector3 direction = VectorUtils.Direction(physicalHand.position, transform.position);
-        
-        physicalHand.AddForce((force * direction - physicalHand.velocity * springDamper));
     }
     
     void Grab(InputAction.CallbackContext context)
@@ -123,9 +76,11 @@ public class PlayerHand : MonoBehaviour
         _grabJoint.projectionMode = JointProjectionMode.PositionAndRotation;
 
         _grabJoint.enableCollision = false;
+
+        _grabbedObjLayer = _grabbedRB.gameObject.layer;
         
-        //Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), true);
-        
+        IgnoreCollisions(true);
+
         Debug.Log("Player Grabbed: " + _grabbedRB.name);
     }
 
@@ -135,9 +90,21 @@ public class PlayerHand : MonoBehaviour
         
         if (_grabbedRB == null) return;
 
-        //Physics.IgnoreCollision(_grabbedRB.GetComponent<Collider>(), physicalHand.GetComponent<Collider>(), false);
+        IgnoreCollisions(false);
+        _grabbedObjLayer = 0;
         
         Destroy(_grabJoint);
         _grabbedRB = null;
+    }
+
+    void IgnoreCollisions(bool ignore)
+    {
+        if (_grabbedRB == null) return;
+        if (!_grabbedRB.TryGetComponent(out Collider grabbedCol)) return;
+        
+        foreach (var otherCol in ignoreGrabbedObject)
+        {
+            Physics.IgnoreCollision(grabbedCol, otherCol, ignore);
+        }
     }
 }
