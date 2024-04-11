@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &32056921
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17597628
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.460001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &126186408
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +506,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: -102.506, y: 0, z: 0}
+--- !u!1001 &199107372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.320002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &225053598
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +588,7 @@ GameObject:
   - component: {fileID: 225053600}
   - component: {fileID: 225053599}
   - component: {fileID: 225053604}
+  - component: {fileID: 225053605}
   m_Layer: 0
   m_Name: weaponSphere
   m_TagString: Untagged
@@ -553,9 +690,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2487, y: 0.2487, z: 0.2487}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1676325154}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &225053604
@@ -585,6 +723,158 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &225053605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225053598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 2
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
 --- !u!1 &229411235
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,6 +980,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &285194652
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &329766897
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +1332,7 @@ GameObject:
   - component: {fileID: 375191920}
   - component: {fileID: 375191919}
   - component: {fileID: 375191924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1784,6 +2142,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &516270679
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.155975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.9828687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &570862093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +2329,7 @@ GameObject:
   - component: {fileID: 608198447}
   - component: {fileID: 608198446}
   - component: {fileID: 608198451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2356,6 +2782,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -41.88}
+--- !u!1001 &636850826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2500005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &661483319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2955,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 10.257, y: 61.533, z: 52.124}
+--- !u!1001 &681649088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.2459764
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &713267938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +3037,7 @@ GameObject:
   - component: {fileID: 713267940}
   - component: {fileID: 713267939}
   - component: {fileID: 713267944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2957,6 +3519,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &826358229
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3636,142 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &918807616
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.925976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1699996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_22
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+--- !u!1001 &921450327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &944271936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3877,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &944787116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.309999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_24
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &950844877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +4680,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: -102.506, y: 0, z: 0}
+--- !u!1001 &1237609143
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.925976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0028691292
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_21
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1242837622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +5205,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &1292206139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.155975
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1305146319
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,6 +5378,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: -26.021, y: 0, z: 0}
+--- !u!1001 &1312053140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1325856052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,6 +5761,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1391799520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6699996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.880001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1399460858
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,6 +5934,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1448512568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.592869
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1463571057
 GameObject:
   m_ObjectHideFlags: 0
@@ -5052,7 +6226,7 @@ GameObject:
   - component: {fileID: 1529002783}
   - component: {fileID: 1529002782}
   - component: {fileID: 1529002787}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5324,6 +6498,210 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!1001 &1537054198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+--- !u!1001 &1540145987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+--- !u!1001 &1558271233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.2040234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1570141773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5685,6 +7063,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1676325153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676325154}
+  - component: {fileID: 1676325157}
+  - component: {fileID: 1676325156}
+  - component: {fileID: 1676325155}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676325154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676325153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.27712566, y: -0, z: -0, w: 0.9608337}
+  m_LocalPosition: {x: 0, y: 8.77, z: 5.48}
+  m_LocalScale: {x: 0.6818, y: 20.459007, z: 0.6818}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 225053603}
+  m_LocalEulerAnglesHint: {x: 32.177, y: 0, z: 0}
+--- !u!65 &1676325155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676325153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1676325156
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676325153}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1676325157
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676325153}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1715507359
 GameObject:
   m_ObjectHideFlags: 0
@@ -5895,6 +7378,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &1731870888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.024023
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.280001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_14
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1737705234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6012,6 +7563,205 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496880615cd240be960d436c1c8ae570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1772851416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5453803518092506982, guid: 99f3432cd64d2f9458d627de87621b4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8586860966260639838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1782722540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.464024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+--- !u!1001 &1859083770
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.209999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.6700006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
+--- !u!1 &1904349896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904349897}
+  - component: {fileID: 1904349898}
+  m_Layer: 3
+  m_Name: Hand Visuallizer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1904349897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904349896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772851416}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1904349898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904349896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9813c68d7d6f44282ace8bd2d1fd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UseOptimizedControls: 0
+  m_LeftHandMesh: {fileID: 919132149155446097, guid: bf7151579c38e2a44be94ba8773876c1,
+    type: 3}
+  m_RightHandMesh: {fileID: 919132149155446097, guid: 56186ccf27ad7864681108ed88349071,
+    type: 3}
+  m_HandMeshMaterial: {fileID: 2100000, guid: d164b78f3f0019242892447c8c5e6d4d, type: 2}
+  m_DrawMeshes: 1
+  m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868,
+    type: 3}
+  m_DebugDrawJoints: 0
+  m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b,
+    type: 3}
+  m_VelocityType: 2
 --- !u!1 &1923391483
 GameObject:
   m_ObjectHideFlags: 0
@@ -6222,6 +7972,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 47.963, z: 0}
+--- !u!1001 &1944011895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &1962178872
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,6 +8145,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2001209873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.17597628
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.63287
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &2007274075
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,6 +8318,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 631251262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2030170732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.389999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5024004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.219999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
+        type: 3}
+      propertyPath: m_Name
+      value: Caveman_ActiveRagdoll_19
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8d13066fa6300c4aab1c2a26d70e728, type: 3}
 --- !u!1 &2040146116
 GameObject:
   m_ObjectHideFlags: 0
@@ -6755,6 +8709,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 790238532428270385, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889385192527622625, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112597822079977789, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112597822079977789, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_AnimateModel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112597822079977789, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_ModelSelectTransition
+      value: Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112597822079977789, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_ModelDeSelectTransition
+      value: Deselect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210790592287177899, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5453803518092506982, guid: 99f3432cd64d2f9458d627de87621b4b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6805,14 +8794,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5553484222264703618, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8502157837297712684, guid: 99f3432cd64d2f9458d627de87621b4b,
         type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4156216109023079181, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
+    - {fileID: 5553484222264703618, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
+    - {fileID: 790238532428270385, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
+    - {fileID: 6025810181091063557, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
+    - {fileID: 150233002153168129, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
+    - {fileID: 5022527242354452900, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5453803518092506982, guid: 99f3432cd64d2f9458d627de87621b4b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1904349897}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f3432cd64d2f9458d627de87621b4b, type: 3}
 --- !u!1001 &8879355987655710968
@@ -6823,16 +8827,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 792977626002048068, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015396537
-      objectReference: {fileID: 0}
-    - target: {fileID: 902520409978866984, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.038491298
-      objectReference: {fileID: 0}
     - target: {fileID: 1977017145152531987, guid: f8d13066fa6300c4aab1c2a26d70e728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6883,65 +8877,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2645961345429350988, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.038491298
-      objectReference: {fileID: 0}
-    - target: {fileID: 4276223772277173876, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.023094814
-      objectReference: {fileID: 0}
-    - target: {fileID: 5753329480979763755, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: totalMass
-      value: 4.355331
-      objectReference: {fileID: 0}
-    - target: {fileID: 5753329480979763755, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: massIncrement
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755826528462820276, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015396537
-      objectReference: {fileID: 0}
-    - target: {fileID: 6322188697799668663, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.023094814
-      objectReference: {fileID: 0}
     - target: {fileID: 6651537488271283315, guid: f8d13066fa6300c4aab1c2a26d70e728,
         type: 3}
       propertyPath: m_Name
       value: Caveman_ActiveRagdoll
-      objectReference: {fileID: 0}
-    - target: {fileID: 6726297825143517685, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015396537
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827864965908137264, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.023094814
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336284276058205316, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.023094814
-      objectReference: {fileID: 0}
-    - target: {fileID: 7452264641501187457, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015396537
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985934408777020765, guid: f8d13066fa6300c4aab1c2a26d70e728,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015396537
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6963,4 +8902,28 @@ SceneRoots:
   - {fileID: 375191923}
   - {fileID: 1529002786}
   - {fileID: 8879355987655710968}
+  - {fileID: 2001209873}
+  - {fileID: 1448512568}
+  - {fileID: 516270679}
+  - {fileID: 1237609143}
+  - {fileID: 681649088}
+  - {fileID: 32056921}
+  - {fileID: 921450327}
+  - {fileID: 1292206139}
+  - {fileID: 918807616}
+  - {fileID: 1537054198}
+  - {fileID: 1391799520}
+  - {fileID: 1782722540}
+  - {fileID: 285194652}
+  - {fileID: 636850826}
+  - {fileID: 826358229}
+  - {fileID: 199107372}
+  - {fileID: 1731870888}
+  - {fileID: 1859083770}
+  - {fileID: 944787116}
+  - {fileID: 1312053140}
+  - {fileID: 1944011895}
+  - {fileID: 1558271233}
+  - {fileID: 2030170732}
+  - {fileID: 1540145987}
   - {fileID: 225053603}
