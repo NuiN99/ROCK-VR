@@ -85,7 +85,7 @@ public class PlayerSwingingXR : MonoBehaviour
 
                 if (_connectionPoint != _defaultConnectionPoint)
                 {
-                    _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * pullForce / 5);
+                    _connectionPoint.AddForce((-dirFromLastFrameHandPos + -dirToConnection).normalized * pullForce);
 
                     _groundMovement.disableGroundDrag = true;
                     Spleen.DoAfter(zeroDragDurationAfterPull, () => _groundMovement.disableGroundDrag = false);
