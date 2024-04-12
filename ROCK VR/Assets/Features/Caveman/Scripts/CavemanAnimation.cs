@@ -1,11 +1,12 @@
 ﻿using Animancer;
+using NuiN.NExtensions;
 using UnityEngine;
 
 public class CavemanAnimation : MonoBehaviour
 {
     [SerializeField] AnimancerComponent animator;
     [SerializeField] AnimationClip chaseAnim;
-    [SerializeField] AnimationClip attackAnim;
+    [SerializeField] AnimationClip[] attackAnim;
 
     public void PlayAnimation(CavemanBrain.State state)
     {
@@ -15,7 +16,7 @@ public class CavemanAnimation : MonoBehaviour
                 animator.Play(chaseAnim);
                 break;
             case CavemanBrain.State.Attack:
-                animator.Play(attackAnim);
+                animator.Play(attackAnim.RandomItem()).SetSpeed(0.75f);
                 break;
         }
     }

@@ -518,7 +518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setMass: 1
   totalMass: 1
-  massIncrement: 0.05
   globalMoveForce: 0.7
   globalRotateForce: 25
   damping: 0.75
@@ -546,6 +545,11 @@ MonoBehaviour:
   idleAnim: {fileID: 7400000, guid: f1a338a16e96a18488e3f0e43b5a729d, type: 2}
   getUpFromBackDownAnimSpeed: 0.75
   getUpFromFaceDownAnimSpeed: 1
+  ragdollInterface:
+    mode: 0
+    unityReference: {fileID: 6508874981112618849}
+    rawReference:
+      rid: -2
   limbs:
   - <RB>k__BackingField: {fileID: 792977626002048068}
     <Target>k__BackingField: {fileID: 2663570140793448101}
@@ -602,6 +606,11 @@ MonoBehaviour:
     <MoveForce>k__BackingField: 1
     <RotateForce>k__BackingField: 1
     rotateAdjustFactor: 0.5
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!114 &5812661890664274369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,12 +681,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d648f87fcc2cf344a9fcb55fc5ab348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionBounds:
+    m_Center: {x: 0, y: 2.39, z: 6.34}
+    m_Extent: {x: 5.13, y: 2.34, z: 6.41}
   anim: {fileID: 8666140191588535722}
   moveSpeed: 1.25
-  rotateSpeed: 1.25
+  rotateSpeed: 50
   body: {fileID: 8258040519059420198}
-  attackBounds: {fileID: 0}
-  visionBounds: {fileID: 8668694140187622995}
+  physicalBody: {fileID: 4323216319687690576}
+  maxDistFromPhysical: 0.3
+  attackDistance: 1.5
   detectionInterval:
     duration: 0.2
     startCompleted: 1
@@ -687,6 +700,8 @@ MonoBehaviour:
   noCavemanMask:
     serializedVersion: 2
     m_Bits: 831
+  currentState: 0
+  attackDuration: 2
 --- !u!114 &8666140191588535722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +716,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5812661890664274369}
   chaseAnim: {fileID: 7400000, guid: 5ddf4c4946d88454cbc14d2680f5a160, type: 2}
-  attackAnim: {fileID: 0}
+  attackAnim:
+  - {fileID: 7400000, guid: 7f87e91b47f606f4a9bff553341f7d69, type: 2}
+  - {fileID: 7400000, guid: 4f91d88d78d713848b60f37c4b60af73, type: 2}
+  - {fileID: 7400000, guid: b5919cf6d7c9f93469c7989d60f6390a, type: 2}
 --- !u!1 &7094236419599573954
 GameObject:
   m_ObjectHideFlags: 0

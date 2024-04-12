@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NuiN.NExtensions;
+using SpleenTween;
 using UnityEngine;
 using SimpleTimer = NuiN.NExtensions.SimpleTimer;
 
-public class CavemanBrain : MonoBehaviour
+public class CavemanBrain : MonoBehaviour, IActiveRagdoll
 {
     public enum State
     {
@@ -17,48 +18,56 @@ public class CavemanBrain : MonoBehaviour
         Dead
     }
 
+    [SerializeField] Bounds detectionBounds;
+
     [SerializeField] CavemanAnimation anim;
 
     [SerializeField] float moveSpeed;
     [SerializeField] float rotateSpeed;
     
     [SerializeField] Transform body;
-
-    [SerializeField] SphereCollider attackBounds;
-    [SerializeField] SphereCollider visionBounds;
+    [SerializeField] Transform physicalBody;
+    [SerializeField] float maxDistFromPhysical = 0.25f;
+    [SerializeField] float attackDistance = 1f;
 
     [SerializeField] SimpleTimer detectionInterval;
 
     [SerializeField] LayerMask playerMask;
     [SerializeField] LayerMask noCavemanMask;
 
-    State _currentState;
+    [SerializeField, ReadOnlyPlayMode] State currentState;
     Vector3 _lastSeenPos;
+
+    [SerializeField] float attackDuration = 2f;
 
     void Update()
     {
+        if (currentState is State.Ragdoll or State.Dead) return;
+        
         SnapToGround();
-        body.position = Vector3.MoveTowards(body.position, _lastSeenPos, moveSpeed * Time.deltaTime);
-        Vector3 direction = VectorUtils.Direction(body.position, _lastSeenPos);
-        if (direction != Vector3.zero)
-        {
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            body.rotation = Quaternion.RotateTowards(body.rotation, lookRotation, rotateSpeed * Time.deltaTime);
-        }
+        Move();
         
         if (!detectionInterval.Complete()) return;
 
-        Collider[] possibleColliders = Physics.OverlapSphere(visionBounds.transform.position + visionBounds.center, visionBounds.radius, playerMask);
-        bool detectedPlayer = possibleColliders.Length > 0;
-        
-        if (detectedPlayer && _currentState is State.Search or State.Attack or State.Chase)
+        bool detectedPlayer = TryDetectPlayer(out Collider[] hitColliders);
+
+        if (detectedPlayer && currentState is State.Chase && currentState != State.Attack)
         {
-            _lastSeenPos = possibleColliders[0].transform.position;
+            if (Vector3.Distance(body.position, PlayerPosition.Value) <= attackDistance)
+            {
+                SetState(State.Attack);
+                Spleen.DoAfter(attackDuration, () => SetState(State.Idle));
+            }
+        }
+        
+        if (detectedPlayer && currentState is State.Search or State.Attack or State.Chase)
+        {
+            _lastSeenPos = hitColliders[0].transform.position;
         }
 
-        if (_currentState is State.Search or State.Idle)
+        if (currentState is State.Search or State.Idle)
         {
-            if (Physics.OverlapSphere(visionBounds.transform.position + visionBounds.center, visionBounds.radius, playerMask).Length > 0)
+            if (detectedPlayer)
             {
                 Debug.Log("Detected Player", gameObject);
                 SetState(State.Chase);
@@ -66,15 +75,47 @@ public class CavemanBrain : MonoBehaviour
         }
     }
 
-    void SetState(State state)
+    public void SetState(State state)
     {
         anim.PlayAnimation(state);
-        _currentState = state;
+        currentState = state;
+    }
+    
+    void SnapToGround()
+    {
+        if (currentState != State.Ragdoll && currentState != State.Dead)
+        {
+            if (Physics.Raycast(body.position + (Vector3.up / 2), Vector3.down, out RaycastHit hit, 10, noCavemanMask))
+            {
+                body.transform.position = hit.point;
+            }
+        }
+    }
+
+    void Move()
+    {
+        if (_lastSeenPos == Vector3.zero || currentState != State.Chase && currentState != State.Search) return;
+        if (Vector3.Distance(body.position.With(y:0), physicalBody.position.With(y:0)) >= maxDistFromPhysical) return;
+        
+        body.position = Vector3.MoveTowards(body.position, _lastSeenPos, moveSpeed * Time.deltaTime);
+        
+        Vector3 direction = VectorUtils.Direction(body.position, _lastSeenPos.With(y: body.position.y));
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        body.rotation = Quaternion.RotateTowards(body.rotation, lookRotation, rotateSpeed * Time.deltaTime);
+    }
+
+    bool TryDetectPlayer(out Collider[] colliders)
+    {
+        Vector3 halfExtents = new Vector3(detectionBounds.size.x / 2f, detectionBounds.size.y / 2f, detectionBounds.size.z / 2f);
+        Quaternion boxRotation = Quaternion.LookRotation(body.forward);
+        colliders = Physics.OverlapBox(body.TransformPoint(detectionBounds.center), halfExtents, boxRotation, playerMask);
+        bool detectedPlayer = colliders.Length > 0;
+        return detectedPlayer;
     }
 
     Color GetStateColor()
     {
-        return _currentState switch
+        return currentState switch
         {
             State.Idle => Color.green,
             State.Search => Color.yellow,
@@ -86,24 +127,31 @@ public class CavemanBrain : MonoBehaviour
         };
     }
 
-    void SnapToGround()
-    {
-        if (_currentState != State.Ragdoll && _currentState != State.Dead)
-        {
-            if (Physics.Raycast(body.position + (Vector3.up / 2), Vector3.down, out RaycastHit hit, 10, noCavemanMask))
-            {
-                body.transform.position = hit.point;
-            }
-        }
-    }
-
     void OnDrawGizmos()
     {
+        Gizmos.DrawSphere(body.position, 0.15f);
+        
+        Vector3 halfExtents = new Vector3(detectionBounds.size.x / 2f, detectionBounds.size.y / 2f, detectionBounds.size.z / 2f);
+        Quaternion boxRotation = Quaternion.LookRotation(body.forward);
         Gizmos.color = GetStateColor();
-        if (visionBounds != null)
-        {
-            Gizmos.DrawWireSphere(visionBounds.transform.position + visionBounds.center, visionBounds.radius);
-        }
+        Gizmos.matrix = Matrix4x4.TRS(body.TransformPoint(detectionBounds.center), boxRotation, Vector3.one);
+        Gizmos.DrawWireCube(Vector3.zero, halfExtents * 2f);
+        
         Gizmos.color = Color.white;
+    }
+
+    public void Ragdolled()
+    {
+        SetState(State.Ragdoll);
+    }
+
+    public void UnRagdolled()
+    {
+        SetState(State.Idle);
+    }
+
+    public void Died()
+    {
+        SetState(State.Dead);
     }
 }

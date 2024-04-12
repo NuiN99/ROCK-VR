@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Animancer;
 using NuiN.NExtensions;
+using TNRD;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -16,7 +17,6 @@ public class ActiveRagdoll : MonoBehaviour
 
     [SerializeField] float setMass;
     [SerializeField, ReadOnly] float totalMass;
-    [SerializeField] float massIncrement = 0.1f;
     
     [Header("Force Settings")]
     [SerializeField] float globalMoveForce = 0.7f;
@@ -50,6 +50,8 @@ public class ActiveRagdoll : MonoBehaviour
     [SerializeField] AnimationClip idleAnim;
     [SerializeField] float getUpFromBackDownAnimSpeed = 1f;
     [SerializeField] float getUpFromFaceDownAnimSpeed = 1f;
+
+    [SerializeField] SerializableInterface<IActiveRagdoll> ragdollInterface;
     
     [Header("Limb Force")]
     [SerializeField] FollowLimb[] limbs;
@@ -103,6 +105,7 @@ public class ActiveRagdoll : MonoBehaviour
         if (OffBalance() || !FeetTouchingGround())
         {
             Ragdoll();
+            ragdollInterface.Value.Ragdolled();
         }
     }
 
@@ -128,6 +131,8 @@ public class ActiveRagdoll : MonoBehaviour
         animator.Stop();
         _fullRagdoll = true;
         StartCoroutine(GetUpAfterDelay(getUpAfterRagdolledDelay));
+        
+        ragdollInterface.Value.Ragdolled();
     }
 
     public void AddForceInDirection(Vector3 direction, float amount)
@@ -145,6 +150,8 @@ public class ActiveRagdoll : MonoBehaviour
         _fullRagdoll = true;
         
         StopAllCoroutines();
+        
+        ragdollInterface.Value.Died();
     }
 
     IEnumerator GetUpAfterDelay(float delay)
@@ -166,7 +173,11 @@ public class ActiveRagdoll : MonoBehaviour
         float animSpeed = getUpAnim == getUpFromFaceDownAnim ? getUpFromFaceDownAnimSpeed : getUpFromBackDownAnimSpeed;
 
         animator.Play(getUpAnim, 1f).Force().SetSpeed(animSpeed)
-            .OnComplete(() => animator.Play(walkAnim, 1f));
+            .OnComplete(() =>
+            {
+                ragdollInterface.Value.UnRagdolled();
+                animator.Play(idleAnim, 1f);
+            });
         
         _fullRagdoll = false;
     }
