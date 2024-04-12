@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using NuiN.NExtensions;
 using UnityEngine;
 
 public class AmbainceSoundPicker : MonoBehaviour
 {
     public AudioSource sound;
     public AudioClip cave, forst;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] CollisionProxy proxy;
+
+    void OnEnable()
     {
-        sound = GetComponent<AudioSource>();
+        proxy.TriggerEnter += Sound;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-
+        proxy.TriggerEnter -= Sound;
     }
 
-    private void OnTriggerEnter(Collider other)
-
+    void Sound(Collider other)
     {
-        Debug.Log("I touch something");
-        if (other.gameObject.tag == "caveSound")
+        if (other.gameObject.CompareTag("caveSound"))
         {
-            Debug.Log("caveSound trigger");
             sound.clip = cave;
             
         }
-        else if (other.gameObject.tag == "forstSound")
+        else if (other.gameObject.CompareTag("forstSound"))
         {
-            Debug.Log("forstSound trigger");
             sound.clip = forst;
         }
 

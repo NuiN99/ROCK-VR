@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5751861446659472951}
   - component: {fileID: 4484610720134298662}
   - component: {fileID: -7920224647713482255}
+  - component: {fileID: 8709666206354659490}
   m_Layer: 0
   m_Name: Rock2_Physics
   m_TagString: Untagged
@@ -147,3 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9d61f32298864408bdb53a05ad968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8709666206354659490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762781521872820881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a5382e62167c243a7812258408006a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 11400000, guid: c52aab03eff60ea49a13ec0628eaabb8, type: 2}
+  timer:
+    duration: 0.25
+    startCompleted: 1

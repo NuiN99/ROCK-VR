@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1348057441121901114}
   - component: {fileID: 3736939631413395562}
   - component: {fileID: -7761369447948211064}
+  - component: {fileID: -544329176792639088}
   m_Layer: 0
   m_Name: Rock5_Physics
   m_TagString: Untagged
@@ -147,3 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9d61f32298864408bdb53a05ad968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-544329176792639088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49314464374768341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a5382e62167c243a7812258408006a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitSound: {fileID: 11400000, guid: c52aab03eff60ea49a13ec0628eaabb8, type: 2}
+  timer:
+    duration: 0.25
+    startCompleted: 1

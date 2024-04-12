@@ -1,5 +1,6 @@
 ﻿using NuiN.Movement;
 using NuiN.NExtensions;
+using NuiN.ScriptableHarmony.Sound;
 using SpleenTween;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -40,6 +41,8 @@ public class PlayerSwingingXR : MonoBehaviour
     [SerializeField] RopeVisual ropeVisual;
 
     [SerializeField] Transform realHandPos;
+
+    [SerializeField] SoundSO pullSound; 
     
     void Awake()
     {
@@ -97,6 +100,8 @@ public class PlayerSwingingXR : MonoBehaviour
                 {
                     rb.AddForce(combinedDir * (pullForce * distFromLastFrameHandPos), ForceMode.VelocityChange);
                 }
+                
+                pullSound.PlaySpatial(root.position);
             }
         }
         
@@ -148,6 +153,8 @@ public class PlayerSwingingXR : MonoBehaviour
         indicatorLineRenderer.enabled = false;
         
         _attached = true;
+        
+        pullSound.PlaySpatial(root.position);
     }
 
     void SetJointLimit(float distance)

@@ -15,8 +15,8 @@ MonoBehaviour:
   audioMixerGroup: {fileID: 0}
   clips:
   - {fileID: 8300000, guid: 3ff0b64008b075a45a2fa93c38d96d62, type: 3}
-  minVolume: 0.4
-  maxVolume: 0.6
+  minVolume: 0.6
+  maxVolume: 0.8
   useFixedVolumes: 0
   possibleVolumes: []
   minPitch: 0.7

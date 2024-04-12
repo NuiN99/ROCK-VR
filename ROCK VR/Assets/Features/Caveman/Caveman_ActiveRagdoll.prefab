@@ -643,7 +643,7 @@ MonoBehaviour:
   dead: {fileID: 11400000, guid: 64a40bfc91499444fba31e718194f9a4, type: 2}
   head: {fileID: 2433041583678126919}
   damageSoundInterval:
-    duration: 0.5
+    duration: 1
     startCompleted: 1
   eyelids: {fileID: 5525263800237915051}
 --- !u!114 &1786770521182418742
@@ -685,7 +685,7 @@ MonoBehaviour:
   club: {fileID: 6471647266275432329}
   detectionBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 10, y: 5, z: 10}
+    m_Extent: {x: 15, y: 5, z: 15}
   anim: {fileID: 8666140191588535722}
   moveSpeed: 1.25
   rotateSpeed: 50

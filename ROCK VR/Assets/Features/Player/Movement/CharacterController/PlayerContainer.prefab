@@ -144,6 +144,7 @@ MonoBehaviour:
   sound: {fileID: 5009135430362220183}
   cave: {fileID: 8300000, guid: 26239de962510a44099690d748605409, type: 3}
   forst: {fileID: 8300000, guid: 658f6d4f246302d49a17818d6d14f4cd, type: 3}
+  proxy: {fileID: 7751472791070063042}
 --- !u!1 &1484876361196646226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1252,7 @@ Transform:
   m_GameObject: {fileID: 5424723640880804034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1888,6 +1889,7 @@ GameObject:
   - component: {fileID: 9165977817276298754}
   - component: {fileID: 2822060989024313189}
   - component: {fileID: 6125101588607484950}
+  - component: {fileID: 7751472791070063042}
   m_Layer: 3
   m_Name: XROrigin
   m_TagString: Player
@@ -1980,6 +1982,7 @@ MonoBehaviour:
   useMouseAndKeyboard: 0
   ropeVisual: {fileID: 2509926323490809662}
   realHandPos: {fileID: 8357389071745849714}
+  pullSound: {fileID: 11400000, guid: fdbccb0cd1af07e4b8e6ee2ceb85a317, type: 2}
 --- !u!114 &514829110530137695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2314,7 +2317,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 6760510103074966392}
   m_CameraFloorOffsetObject: {fileID: 2795383833077445695}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 1.25
+  m_CameraYOffset: 0.75
 --- !u!114 &2822060989024313189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2339,6 +2342,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d8530240533ea5489e0b4683eed02f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7751472791070063042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760510103074966392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04225c2e9db50c43b59815887cc383c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7547135166311869873
@@ -2605,7 +2620,7 @@ Transform:
   m_GameObject: {fileID: 8758841877575984765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
