@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1485094423535095545}
+  - component: {fileID: 2365406059092922092}
   m_Layer: 0
   m_Name: FernSmall
   m_TagString: Untagged
@@ -121,6 +122,18 @@ Transform:
   - {fileID: 1659744217649000135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2365406059092922092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063358224111707830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9d61f32298864408bdb53a05ad968f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2248122752787811837
 GameObject:
   m_ObjectHideFlags: 0
