@@ -14,6 +14,7 @@ public class ActiveRagdoll : MonoBehaviour
     bool _fullRagdoll;
     bool _dead;
 
+    [SerializeField] float setMass;
     [SerializeField, ReadOnly] float totalMass;
     [SerializeField] float massIncrement = 0.1f;
     
@@ -58,22 +59,12 @@ public class ActiveRagdoll : MonoBehaviour
         totalMass = limbs.Sum(limb => limb.RB.mass);
     }
 
-    [MethodButton("Increase Total Mass")]
-    void IncreaseTotalMass()
+    [MethodButton("Set Total Mass")]
+    void SetTotalMass()
     {
         foreach (var limb in limbs)
         {
-            limb.RB.mass *= (1 + massIncrement);
-        }
-        
-        totalMass = limbs.Sum(limb => limb.RB.mass);
-    }
-    [MethodButton("Decrease Total Mass")]
-    void DecreaseTotalMass()
-    {
-        foreach (var limb in limbs)
-        {
-            limb.RB.mass *= (1 - massIncrement);
+            limb.RB.mass = setMass / limbs.Length;
         }
         
         totalMass = limbs.Sum(limb => limb.RB.mass);

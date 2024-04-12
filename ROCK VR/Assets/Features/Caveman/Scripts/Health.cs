@@ -24,13 +24,13 @@ public class Health : MonoBehaviour, IHealth
         
         currenthealth -= damage;
         damageable.Value.Damaged(damage, direction);
-            
-        if (currenthealth <= 0)
-        {
-            damageable.Value.Died();
-            Dead = true;
-            Debug.Log($"<color=green>{gameObject.name}</color> | <color=black>Died</color>", gameObject);
-        } 
-        else Debug.Log($"<color=green>{gameObject.name}</color> | <color=red>{currenthealth}</color> Health", gameObject);
+        
+        Debug.Log($"<color=green>{gameObject.name}</color> | <color=red>{currenthealth}</color> Health", gameObject);
+
+        if (!(currenthealth <= 0)) return;
+        
+        damageable.Value.Died();
+        Dead = true;
+        Debug.Log($"<color=green>{gameObject.name}</color> | <color=black>Died</color>", gameObject);
     }
 }
