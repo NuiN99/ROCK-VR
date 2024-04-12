@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CavemanLimb : MonoBehaviour
 {
-    const float RAGDOLLING_DAMAGE_MULT = 50f;
+    const float RAGDOLLING_DAMAGE_MULT = 2f;
 
     [SerializeField] ActiveRagdoll ragdoll;
     [SerializeField] SerializableInterface<IHealth> health;
@@ -13,6 +13,8 @@ public class CavemanLimb : MonoBehaviour
     
     void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject.CompareTag("Player")) return;
+        
         if (other.collider.TryGetComponent(out CavemanLimb otherLimb) && otherLimb.ParentRagdoll == ragdoll) return;
 
         if (other.collider.TryGetComponent(out Rigidbody otherRB))
@@ -21,7 +23,7 @@ public class CavemanLimb : MonoBehaviour
         }
         else if (ragdoll.Ragdolling)
         {
-            health.Value.TakeDamage(rb.mass * RAGDOLLING_DAMAGE_MULT, rb.velocity.normalized);
+            health.Value.TakeDamage(rb.velocity.magnitude * RAGDOLLING_DAMAGE_MULT, rb.velocity.normalized);
         }
     }
 

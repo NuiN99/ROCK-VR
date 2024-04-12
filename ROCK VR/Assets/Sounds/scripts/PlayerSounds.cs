@@ -16,7 +16,6 @@ public class PlayerSounds : MonoBehaviour
     public AudioSource weaponSource;
     public AudioSource footstepSource;
 
-    public XRController xrController;
 
     [SerializeField] Rigidbody rb;
     [SerializeField] GroundMovement movement;
@@ -27,7 +26,6 @@ public class PlayerSounds : MonoBehaviour
     void Start()
     {
         footstepSource = GetComponent<AudioSource>();
-        xrController = GetComponent<XRController>();
     }
 
     // Update is called once per frame

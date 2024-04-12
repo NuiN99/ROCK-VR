@@ -43,7 +43,7 @@ namespace NuiN.Movement
         //[SerializeField] float maxSlopeAngle = 45f;
 
         [SerializeField] Rigidbody rb;
-        [SerializeField] Transform rotationTarget;
+        [SerializeField] Rigidbody rotationTarget;
 
         void Reset()
         {
@@ -100,7 +100,7 @@ namespace NuiN.Movement
             Quaternion rotation = input.GetRotation();
             float rotateSpeed = input.IsRunning() ? runningRotateSpeed : walkingRotateSpeed;
 
-            rotationTarget.rotation = Quaternion.RotateTowards(rotationTarget.rotation, rotation, rotateSpeed);
+            rotationTarget.MoveRotation(Quaternion.RotateTowards(rotationTarget.rotation, rotation, rotateSpeed));
         }
 
         void IMovement.Jump()

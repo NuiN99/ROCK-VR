@@ -28,6 +28,9 @@ public class PlayerHand : MonoBehaviour
     Rigidbody _grabbedRB;
     RBSettings _grabbedRBSettings;
     bool _addedRB;
+
+    [SerializeField] Collider grabCol;
+    [SerializeField] Collider noGrabCol;
     
     void OnEnable()
     {
@@ -42,6 +45,9 @@ public class PlayerHand : MonoBehaviour
     
     void Grab(InputAction.CallbackContext context)
     {
+        grabCol.gameObject.SetActive(true);
+        noGrabCol.gameObject.SetActive(false);
+            
         animator.Play(closedAnim, closeFadeTime).Force();
         
         Collider[] hits = Physics.OverlapSphere(transform.position, col.radius, grabMask);
@@ -85,13 +91,17 @@ public class PlayerHand : MonoBehaviour
 
         _grabJoint.enableCollision = false;
 
-        IgnoreCollisions(true);
-
-        Debug.Log("Player Grabbed: " + _grabbedRB.name);
+        if (!_addedRB)
+        {
+            IgnoreCollisions(true);
+        }
     }
 
     void Release(InputAction.CallbackContext context)
     {
+        grabCol.gameObject.SetActive(false);
+        noGrabCol.gameObject.SetActive(true);
+        
         animator.Play(openedAnim, openFadeTime).Force();
         
         if (_grabbedRB == null) return;
