@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CullObject : MonoBehaviour
 {
-    const float CULL_DISTANCE = 25f;
+    const float CULL_DISTANCE = 100;
     const float CULL_INTERVAL = 1f;
 
     float DistFromPlayer => Vector3.Distance(transform.position, PlayerPosition.Value);
