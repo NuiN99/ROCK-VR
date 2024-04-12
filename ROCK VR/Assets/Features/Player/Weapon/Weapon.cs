@@ -22,7 +22,6 @@ public class Weapon : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out IHealth health))
         {
             float impactSpeed = GetImpactSpeed(_lastPosition, _currentPosition);
-            Debug.Log("Impact Speed: " + impactSpeed);
             health.TakeDamage(weaponDamage * impactSpeed, VectorUtils.Direction(_lastPosition, _currentPosition));
             hitSounds.Play();
         }

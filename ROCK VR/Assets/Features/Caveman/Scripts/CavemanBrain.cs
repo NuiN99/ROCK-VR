@@ -18,6 +18,8 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
         Dead
     }
 
+    [SerializeField] GameObject club;
+
     [SerializeField] Bounds detectionBounds;
 
     [SerializeField] CavemanAnimation anim;
@@ -50,8 +52,9 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
         if (!detectionInterval.Complete()) return;
 
         bool detectedPlayer = TryDetectPlayer(out Collider[] hitColliders);
+        bool inRadius = Vector3.Distance(body.position, PlayerPosition.Value) <= attackDistance * 2;
 
-        if (detectedPlayer && currentState is State.Chase && currentState != State.Attack)
+        if (currentState != State.Attack && (inRadius || (detectedPlayer && currentState is State.Chase)))
         {
             if (Vector3.Distance(body.position, PlayerPosition.Value) <= attackDistance)
             {
@@ -67,9 +70,8 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
 
         if (currentState is State.Search or State.Idle)
         {
-            if (detectedPlayer)
+            if (detectedPlayer || inRadius)
             {
-                Debug.Log("Detected Player", gameObject);
                 SetState(State.Chase);
             }
         }
@@ -87,7 +89,7 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
         {
             if (Physics.Raycast(body.position + (Vector3.up / 2), Vector3.down, out RaycastHit hit, 10, noCavemanMask))
             {
-                body.transform.position = hit.point;
+                body.transform.position = hit.point - new Vector3(0, 0.05f, 0f);
             }
         }
     }
@@ -152,6 +154,9 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
 
     public void Died()
     {
+        club.transform.parent = null;
+        club.AddComponent<Rigidbody>().mass = 3;
+        
         SetState(State.Dead);
     }
 }
