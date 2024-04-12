@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 1786770521182418742}
   - component: {fileID: 6508874981112618849}
   - component: {fileID: 8666140191588535722}
+  - component: {fileID: 3242874761388266783}
   m_Layer: 6
   m_Name: Caveman_ActiveRagdoll
   m_TagString: Untagged
@@ -683,8 +684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   club: {fileID: 6471647266275432329}
   detectionBounds:
-    m_Center: {x: 0, y: 2.39, z: 6.34}
-    m_Extent: {x: 5.13, y: 2.34, z: 6.41}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 10, y: 5, z: 10}
   anim: {fileID: 8666140191588535722}
   moveSpeed: 1.25
   rotateSpeed: 50
@@ -721,6 +722,18 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 7f87e91b47f606f4a9bff553341f7d69, type: 2}
   - {fileID: 7400000, guid: 4f91d88d78d713848b60f37c4b60af73, type: 2}
   - {fileID: 7400000, guid: b5919cf6d7c9f93469c7989d60f6390a, type: 2}
+--- !u!114 &3242874761388266783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651537488271283315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9d61f32298864408bdb53a05ad968f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7094236419599573954
 GameObject:
   m_ObjectHideFlags: 0

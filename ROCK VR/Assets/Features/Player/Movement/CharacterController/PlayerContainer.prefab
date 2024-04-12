@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8489fa66f581bbf46846a10a33ca9998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  sound: {fileID: 5009135430362220183}
   cave: {fileID: 8300000, guid: 26239de962510a44099690d748605409, type: 3}
   forst: {fileID: 8300000, guid: 658f6d4f246302d49a17818d6d14f4cd, type: 3}
 --- !u!1 &1484876361196646226
@@ -298,9 +298,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 129798cac41bade4997929cb83238ac3, type: 3}
   - {fileID: 8300000, guid: 751b1db1e7a310548b0373ad410d8981, type: 3}
   weaponSource: {fileID: 0}
-  footstepSource: {fileID: 0}
-  rb: {fileID: 0}
-  movement: {fileID: 0}
+  footstepSource: {fileID: 5960935338958270625}
+  rb: {fileID: 8205871923093682757}
+  movement: {fileID: 514829110530137695}
 --- !u!1 &2228848744240774666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,7 +1251,7 @@ Transform:
   m_GameObject: {fileID: 5424723640880804034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 6760510103074966392}
   m_CameraFloorOffsetObject: {fileID: 2795383833077445695}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 1.5
+  m_CameraYOffset: 1.25
 --- !u!114 &2822060989024313189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2605,7 +2605,7 @@ Transform:
   m_GameObject: {fileID: 8758841877575984765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
