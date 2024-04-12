@@ -20,6 +20,6 @@ public class CullObject : MonoBehaviour
         bool cull = DistFromPlayer > CULL_DISTANCE;
         gameObject.SetActive(!cull);
 
-        Spleen.DoAfter(CULL_INTERVAL, CullAndLoop);
+        Spleen.DoAfter(CULL_INTERVAL, CullAndLoop).StopIfNull(gameObject);
     }
 }

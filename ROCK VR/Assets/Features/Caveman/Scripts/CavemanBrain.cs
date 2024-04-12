@@ -52,7 +52,7 @@ public class CavemanBrain : MonoBehaviour, IActiveRagdoll
         if (!detectionInterval.Complete()) return;
 
         bool detectedPlayer = TryDetectPlayer(out Collider[] hitColliders);
-        bool inRadius = Vector3.Distance(body.position, PlayerPosition.Value) <= attackDistance * 2;
+        bool inRadius = Vector3.Distance(body.position, PlayerPosition.Value) <= attackDistance * 5;
 
         if (currentState != State.Attack && (inRadius || (detectedPlayer && currentState is State.Chase)))
         {

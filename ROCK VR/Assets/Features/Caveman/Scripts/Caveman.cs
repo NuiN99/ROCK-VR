@@ -2,6 +2,7 @@ using NuiN.ScriptableHarmony.Sound;
 using System.Collections;
 using System.Collections.Generic;
 using NuiN.NExtensions;
+using SpleenTween;
 using UnityEngine;
 
 public class Caveman : MonoBehaviour, IDamageable
@@ -28,5 +29,7 @@ public class Caveman : MonoBehaviour, IDamageable
         eyelids.SetActive(true);
         dead.PlaySpatial(head.position);
         ragdoll.PermaRagdoll();
+
+        Spleen.DoAfter(30f, () => Destroy(gameObject));
     }
 }
