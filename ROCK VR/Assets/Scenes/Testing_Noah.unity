@@ -751,7 +751,7 @@ PrefabInstance:
     - target: {fileID: 5807757734176901530, guid: 497ce0c36b7805c4991a9d0e19f587f8,
         type: 3}
       propertyPath: m_Name
-      value: campfier
+      value: campfire
       objectReference: {fileID: 0}
     - target: {fileID: 6616522669797151520, guid: 497ce0c36b7805c4991a9d0e19f587f8,
         type: 3}
