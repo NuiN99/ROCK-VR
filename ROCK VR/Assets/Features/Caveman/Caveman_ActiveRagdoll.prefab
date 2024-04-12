@@ -663,8 +663,8 @@ MonoBehaviour:
     unityReference: {fileID: 8788806960170945994}
     rawReference:
       rid: -2
-  currenthealth: 200
-  maxHealth: 200
+  currenthealth: 500
+  maxHealth: 500
   references:
     version: 2
     RefIds:
@@ -685,7 +685,7 @@ MonoBehaviour:
   club: {fileID: 6471647266275432329}
   detectionBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 15, y: 5, z: 15}
+    m_Extent: {x: 30, y: 5, z: 30}
   anim: {fileID: 8666140191588535722}
   moveSpeed: 1.25
   rotateSpeed: 50

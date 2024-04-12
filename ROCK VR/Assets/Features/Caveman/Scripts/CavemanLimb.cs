@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CavemanLimb : MonoBehaviour
 {
-    const float RAGDOLLING_DAMAGE_MULT = 2.5f;
+    const float RAGDOLLING_DAMAGE_MULT = 5f;
 
     [SerializeField] ActiveRagdoll ragdoll;
     [SerializeField] SerializableInterface<IHealth> health;
